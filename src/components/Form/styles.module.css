@@ -1,0 +1,197 @@
+/* 通用表单组件样式 */
+
+.form {
+  width: 100%;
+}
+
+.formItem {
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.formItem:hover {
+  transform: translateY(-1px);
+}
+
+/* 字段包装器 */
+.fieldWrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* 错误消息样式 */
+.errorMessage {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #ff4d4f;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.errorMessage.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 表单按钮区域 */
+.formButtons {
+  margin-top: 32px;
+  margin-bottom: 0;
+  padding-top: 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.formButtons.buttonLeft {
+  text-align: left;
+}
+
+.formButtons.buttonCenter {
+  text-align: center;
+}
+
+.formButtons.buttonRight {
+  text-align: right;
+}
+
+/* 提交按钮 */
+.submitButton {
+  background: #3964fe;
+  border-color: #3964fe;
+  min-width: 100px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #2d52e8;
+  border-color: #2d52e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(57, 100, 254, 0.3);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(57, 100, 254, 0.2);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 重置按钮 */
+.resetButton {
+  min-width: 100px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.resetButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.resetButton:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.resetButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 取消按钮 */
+.cancelButton {
+  min-width: 100px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cancelButton:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cancelButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .formButtons {
+    margin-top: 24px;
+    padding-top: 16px;
+  }
+
+  .formButtons.buttonLeft,
+  .formButtons.buttonCenter,
+  .formButtons.buttonRight {
+    text-align: center;
+  }
+
+  .submitButton,
+  .resetButton,
+  .cancelButton {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .formItem {
+    margin-bottom: 20px;
+  }
+}
+
+/* 加载状态动画 */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.formItem:has(.ant-input-disabled),
+.formItem:has(.ant-select-disabled) {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* 表单验证状态动画 */
+.formItem:has(.ant-input-status-error),
+.formItem:has(.ant-select-status-error) {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
