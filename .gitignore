@@ -28,3 +28,10 @@ release
 .env
 .env.local
 .env.*.local
+
+# 文档文件（不上传到GitHub）
+*.md
+!README.md
+docs/
+*.doc
+*.docx
