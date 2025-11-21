@@ -1,0 +1,94 @@
+# 依赖
+node_modules/
+.pnp
+.pnp.js
+
+# 测试
+coverage/
+*.lcov
+.nyc_output
+
+# 生产构建
+dist/
+build/
+out/
+*.local
+
+# 日志
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# 环境变量
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Electron
+out/
+dist-electron/
+*.asar
+
+# 数据库
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+
+# 系统文件
+Thumbs.db
+.DS_Store
+
+# 打包文件
+*.dmg
+*.pkg
+*.exe
+*.zip
+*.tar.gz
+
+# 证书和密钥
+*.pem
+*.key
+*.crt
+*.cert
+secrets/
+
+# 配置文件（包含敏感信息）
+config/production.json
+config/local.json
+
+# 日志文件
+logs/
+*.log
+
+# 缓存
+.cache/
+.parcel-cache/
+.eslintcache
+
+# 类型定义
+*.tsbuildinfo
+
+# 其他
+.vercel
+.netlify
+

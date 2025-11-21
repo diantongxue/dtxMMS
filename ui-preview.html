@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客户端UI预览 - Tab页设计</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5f7fa;
+            color: #1a1a1a;
+            overflow: hidden;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-right: 40px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .topbar-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .user-account {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0;
+            background: transparent;
+            border-radius: 0;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .user-account:hover {
+            opacity: 0.8;
+        }
+
+        .user-avatar {
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0;
+        }
+        
+        .user-avatar svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+        }
+
+        .user-name {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* 顶部菜单栏（最顶部） */
+        .menu-bar {
+            height: 56px;
+            background: #3964fe;
+            border-bottom: none;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(57, 100, 254, 0.15);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        /* 搜索框 */
+        .menu-search {
+            position: relative;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .search-input {
+            width: 100px;
+            height: 32px;
+            padding: 0 10px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            color: #fff;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .search-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* 搜索结果下拉框 */
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 400px;
+            max-height: 500px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-top: 8px;
+            padding: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s;
+            z-index: 99999;
+            overflow-y: auto;
+        }
+
+        .search-results.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .search-result-item {
+            padding: 10px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+
+        .search-result-item:hover {
+            background: rgba(57, 100, 254, 0.1);
+            color: #3964fe;
+        }
+
+        .search-result-path {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        .search-result-item:hover .search-result-path {
+            color: #3964fe;
+        }
+
+        .search-no-results {
+            padding: 20px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .menu-list {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            height: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            flex: 1;
+        }
+
+        .menu-list::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .menu-list::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-list::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+        }
+
+        .menu-item {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .menu-item > .menu-link {
+            padding: 0 12px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        
+        .menu-icon {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .menu-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: rgba(255, 255, 255, 0.9);
+            transition: all 0.2s;
+        }
+        
+        .menu-item > .menu-link:hover .menu-icon svg,
+        .menu-item.active > .menu-link .menu-icon svg {
+            fill: #fff;
+        }
+
+        .menu-item > .menu-link:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .menu-item.active > .menu-link {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* 二级菜单 */
+        .submenu {
+            position: fixed;
+            min-width: 240px;
+            max-width: 300px;
+            background: #ffffff;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px) scale(0.95);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 99999;
+            margin-top: 4px;
+            overflow: visible;
+        }
+
+
+        .menu-item:hover > .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        .submenu-item {
+            position: relative;
+            z-index: 10000;
+        }
+        
+        /* 二级菜单选中指示条（跟随鼠标） */
+        .submenu-indicator {
+            position: absolute;
+            left: 0;
+            width: 3px;
+            height: 0;
+            background: linear-gradient(135deg, #3964fe 0%, #5b7cfe 100%);
+            border-radius: 0 2px 2px 0;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10001;
+            pointer-events: none;
+        }
+        
+        /* 确保三级菜单相对于二级菜单项定位 */
+        .submenu-item > .submenu-level3 {
+            position: absolute;
+        }
+        
+        /* 二级菜单项分隔线 */
+        .submenu-item:not(:last-child)::after {
+            content: '';
+            display: block;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #f3f4f6 20%, #f3f4f6 80%, transparent 100%);
+            margin: 4px 8px;
+        }
+        
+        /* 确保三级菜单相对于二级菜单项定位 */
+        .submenu-item:hover > .submenu-level3 {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0) scale(1);
+        }
+
+        .submenu-link {
+            padding: 11px 16px 11px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #1f2937;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            position: relative;
+        }
+
+        .submenu-link > span:first-child {
+            padding-left: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .submenu-icon {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .submenu-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #6b7280;
+            transition: all 0.2s;
+        }
+        
+        .submenu-link:hover .submenu-icon svg {
+            fill: #3964fe;
+        }
+
+        .submenu-link:hover {
+            background: linear-gradient(90deg, rgba(57, 100, 254, 0.1) 0%, rgba(57, 100, 254, 0.06) 100%);
+            color: #3964fe;
+            box-shadow: 0 2px 8px rgba(57, 100, 254, 0.1);
+        }
+
+        .submenu-arrow {
+            font-size: 14px;
+            color: #9ca3af;
+            margin-left: 12px;
+            transition: all 0.2s;
+            font-weight: 300;
+        }
+
+        .submenu-link:hover .submenu-arrow {
+            color: #3964fe;
+            transform: translateX(2px);
+        }
+
+        /* 三级菜单 */
+        .submenu-level3 {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            min-width: 500px;
+            max-width: 600px;
+            background: #ffffff;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 12px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-8px) scale(0.95);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999999;
+            margin-left: 6px;
+            overflow: visible;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+        }
+        
+        /* 三级菜单显示在左侧 */
+        .submenu-level3.show-left {
+            left: auto;
+            right: 100%;
+            margin-left: 0;
+            margin-right: 6px;
+            transform: translateX(8px) scale(0.95);
+        }
+        
+        .submenu-item:hover > .submenu-level3.show-left {
+            transform: translateX(0) scale(1);
+        }
+
+        .submenu-level3-link {
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            color: #4b5563;
+            font-size: 14px;
+            font-weight: 400;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .submenu-level3-icon {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .submenu-level3-icon svg {
+            width: 14px;
+            height: 14px;
+            fill: #9ca3af;
+            transition: all 0.2s;
+        }
+        
+        .submenu-level3-link:hover .submenu-level3-icon svg {
+            fill: #3964fe;
+        }
+
+        .submenu-level3-link:hover {
+            background: linear-gradient(135deg, rgba(57, 100, 254, 0.12) 0%, rgba(57, 100, 254, 0.08) 100%);
+            color: #3964fe;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(57, 100, 254, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .btn-icon {
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            border: none;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            padding: 0;
+        }
+        
+        .btn-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+            stroke: none;
+            transition: all 0.2s;
+        }
+
+        .btn-icon:hover {
+            opacity: 0.8;
+        }
+        
+        .btn-icon:hover svg {
+            stroke: #fff;
+        }
+
+        /* 主容器 */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+
+        /* 主内容区 */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #f5f7fa;
+            overflow: hidden;
+            min-height: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Tab栏 */
+        .tab-bar {
+            height: 48px;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            gap: 4px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+            position: relative;
+            z-index: 1;
+        }
+
+        .tab-item {
+            height: 36px;
+            padding: 0 16px;
+            border-radius: 6px;
+            background: transparent;
+            border: none;
+            color: #6b7280;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            transition: all 0.2s;
+            position: relative;
+            font-size: 14px;
+        }
+
+        .tab-item:hover {
+            background: #f3f4f6;
+            color: #1a1a1a;
+        }
+
+        .tab-item.active {
+            background: linear-gradient(135deg, #3964fe 0%, #5b7cfe 100%);
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(57, 100, 254, 0.25);
+        }
+
+        .tab-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3964fe 0%, #5b7cfe 100%);
+            border-radius: 2px 2px 0 0;
+        }
+
+        .tab-close {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.2s;
+        }
+
+        .tab-item:hover .tab-close {
+            opacity: 1;
+        }
+
+        .tab-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .tab-item.active .tab-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .tab-add {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            border: 1px dashed #d1d5db;
+            background: transparent;
+            color: #9ca3af;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            margin-left: 8px;
+        }
+
+        .tab-add:hover {
+            border-color: #3964fe;
+            color: #3964fe;
+            background: rgba(57, 100, 254, 0.1);
+        }
+
+        /* Tab内容区 */
+        .tab-content {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tab-panel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: none;
+            padding: 24px;
+            overflow-y: auto;
+            z-index: 1;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        /* 内容样式 */
+        .content-header {
+            margin-bottom: 24px;
+        }
+
+        .content-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .content-subtitle {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            border-color: #3964fe;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(57, 100, 254, 0.15);
+        }
+
+        .card-title {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .card-value {
+            font-size: 28px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #3964fe 0%, #5b7cfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+        }
+
+        .card-change {
+            font-size: 12px;
+            color: #10b981;
+            font-weight: 500;
+        }
+
+        .table-container {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .table td {
+            padding: 16px;
+            border-top: 1px solid #f3f4f6;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+
+        .table tr:hover {
+            background: #f9fafb;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .badge-success {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+        }
+
+        .badge-warning {
+            background: rgba(245, 158, 11, 0.1);
+            color: #f59e0b;
+        }
+
+        /* 商家后台预览 */
+        .merchant-preview {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #fff;
+        }
+
+        /* 滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f5f7fa;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #3964fe 0%, #5b7cfe 100%);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #2d52e8 0%, #4a6afd 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部菜单栏（合并到顶部） -->
+        <div class="menu-bar">
+            <div class="logo">
+                <div class="logo-icon">📱</div>
+                <div class="logo-text">滇同学·智慧系统</div>
+            </div>
+            <div class="menu-search">
+                <input type="text" class="search-input" id="menuSearch" placeholder="搜索菜单...">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+            <div class="menu-list" id="menuList">
+                <!-- 菜单将通过JavaScript动态生成 -->
+            </div>
+            <div class="topbar-actions">
+                <button class="btn-icon" title="设置">
+                    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M512 64a32 32 0 0 1 32 32v64a32 32 0 0 1-64 0V96a32 32 0 0 1 32-32zm0 768a32 32 0 0 1 32 32v64a32 32 0 1 1-64 0v-64a32 32 0 0 1 32-32zm448-384a32 32 0 0 1-32 32h-64a32 32 0 1 1 0-64h64a32 32 0 0 1 32 32zm-768 0a32 32 0 0 1-32 32H96a32 32 0 1 1 0-64h64a32 32 0 0 1 32 32zm678.4-192a32 32 0 0 1-22.4 9.6 32 32 0 0 1-22.4-54.4l45.2-45.2a32 32 0 0 1 45.2 45.2l-45.2 45.2zm-566.4 566.4a32 32 0 0 1-22.4 9.6 32 32 0 0 1-22.4-54.4l45.2-45.2a32 32 0 0 1 45.2 45.2l-45.2 45.2zm566.4 0a32 32 0 0 1-45.2-45.2l45.2-45.2a32 32 0 1 1 45.2 45.2l-45.2 45.2zm-566.4-566.4a32 32 0 0 1 45.2-45.2l45.2 45.2a32 32 0 0 1-45.2 45.2l-45.2-45.2zM512 192a320 320 0 1 0 0 640 320 320 0 0 0 0-640zm0 64a256 256 0 1 1 0 512 256 256 0 0 1 0-512z" fill="#fff"/>
+                    </svg>
+                </button>
+                <button class="btn-icon" title="通知">
+                    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M512 128a64 64 0 0 1 64 64v64H448v-64a64 64 0 0 1 64-64zm256 192v128h85.333a42.667 42.667 0 0 1 42.667 42.667v42.666a128 128 0 0 1-128 128H170.667a128 128 0 0 1-128-128V554.667a42.667 42.667 0 0 1 42.667-42.667H256V320a256 256 0 0 1 512 0zm-85.333 128H341.333v128h341.334V448zM512 832a85.333 85.333 0 0 1-85.333-85.333h170.666A85.333 85.333 0 0 1 512 832z" fill="#fff"/>
+                    </svg>
+                </button>
+                <div class="user-account">
+                    <div class="user-avatar">
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M512 512a192 192 0 1 0 0-384 192 192 0 0 0 0 384zm0 64a256 256 0 1 1 0-512 256 256 0 0 1 0 512zm320 320v-96a96 96 0 0 0-96-96H288a96 96 0 0 0-96 96v96a32 32 0 1 1-64 0v-96a160 160 0 0 1 160-160h448a160 160 0 0 1 160 160v96a32 32 0 1 1-64 0z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <span class="user-name">管理员</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <!-- Tab栏 -->
+            <div class="tab-bar">
+                <button class="tab-item active" data-tab="dashboard">
+                    <span>数据看板</span>
+                    <span class="tab-close">×</span>
+                </button>
+                <button class="tab-item" data-tab="merchant1">
+                    <span>拼多多商家后台 - 账号1</span>
+                    <span class="tab-close">×</span>
+                </button>
+                <button class="tab-item" data-tab="merchant2">
+                    <span>拼多多商家后台 - 账号2</span>
+                    <span class="tab-close">×</span>
+                </button>
+                <button class="tab-add" title="新建标签">+</button>
+            </div>
+
+            <!-- Tab内容区 -->
+            <div class="tab-content">
+                <!-- 数据看板 -->
+                <div class="tab-panel active" id="dashboard">
+                    <div class="content-header">
+                        <h1 class="content-title">数据看板</h1>
+                        <p class="content-subtitle">实时监控设备状态和数据采集情况</p>
+                    </div>
+
+                    <div class="content-grid">
+                        <div class="card">
+                            <div class="card-title">在线设备</div>
+                            <div class="card-value">3</div>
+                            <div class="card-change">↑ 1 台</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">今日采集数据</div>
+                            <div class="card-value">1,234</div>
+                            <div class="card-change">↑ 12%</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">订单总数</div>
+                            <div class="card-value">5,678</div>
+                            <div class="card-change">↑ 8%</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">数据采集率</div>
+                            <div class="card-value">98.5%</div>
+                            <div class="card-change">↑ 2.3%</div>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>设备ID</th>
+                                    <th>设备名称</th>
+                                    <th>状态</th>
+                                    <th>最后在线</th>
+                                    <th>采集数据量</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>device-001</td>
+                                    <td>华为 P50</td>
+                                    <td><span class="badge badge-success">在线</span></td>
+                                    <td>刚刚</td>
+                                    <td>456</td>
+                                </tr>
+                                <tr>
+                                    <td>device-002</td>
+                                    <td>小米 13</td>
+                                    <td><span class="badge badge-success">在线</span></td>
+                                    <td>2分钟前</td>
+                                    <td>389</td>
+                                </tr>
+                                <tr>
+                                    <td>device-003</td>
+                                    <td>iPhone 14</td>
+                                    <td><span class="badge badge-warning">离线</span></td>
+                                    <td>1小时前</td>
+                                    <td>234</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 商家后台1 -->
+                <div class="tab-panel" id="merchant1">
+                    <div class="content-header">
+                        <h1 class="content-title">拼多多商家后台 - 账号1</h1>
+                        <p class="content-subtitle">实时数据采集和增强功能</p>
+                    </div>
+                    <iframe class="merchant-preview" src="about:blank" frameborder="0"></iframe>
+                </div>
+
+                <!-- 商家后台2 -->
+                <div class="tab-panel" id="merchant2">
+                    <div class="content-header">
+                        <h1 class="content-title">拼多多商家后台 - 账号2</h1>
+                        <p class="content-subtitle">实时数据采集和增强功能</p>
+                    </div>
+                    <iframe class="merchant-preview" src="about:blank" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 13个一级菜单（2-3个字）
+        const menuData = [
+            '看板', '设备', '采集', '分析', '商家', 
+            '设置', '任务', '监控', '报表', '用户',
+            '权限', '日志', '备份'
+        ];
+        
+        // 一级菜单图标（Ant Design 风格）
+        const menuIcons = [
+            // 看板
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6c-3.1-3.1-8.2-3.1-11.3 0l-230 229.1L461.4 404c-3.1-3.1-8.2-3.1-11.3 0L266.3 586.7c-3.1 3.1-3.1 8.2 0 11.3l39.5 39.7z"/></svg>',
+            // 设备
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M744 62H280c-35.3 0-64 28.7-64 64v768c0 35.3 28.7 64 64 64h464c35.3 0 64-28.7 64-64V126c0-35.3-28.7-64-64-64zM512 824c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm116-280H396c-6.6 0-12-5.4-12-12V380c0-6.6 5.4-12 12-12h232c6.6 0 12 5.4 12 12v152c0 6.6-5.4 12-12 12zM176 184c0-8.8 7.2-16 16-16h640c8.8 0 16 7.2 16 16v512c0 8.8-7.2 16-16 16H192c-8.8 0-16-7.2-16-16V184z"/></svg>',
+            // 采集
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"/><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"/></svg>',
+            // 分析
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6c-3.1-3.1-8.2-3.1-11.3 0l-230 229.1L461.4 404c-3.1-3.1-8.2-3.1-11.3 0L266.3 586.7c-3.1 3.1-3.1 8.2 0 11.3l39.5 39.7z"/></svg>',
+            // 商家
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M859.9 681.4h-14.1c27.1-35.8 44.2-78.8 44.2-125.4 0-141.2-114.8-256-256-256s-256 114.8-256 256c0 46.6 17.1 89.6 44.2 125.4h-14.1c-12.3 0-23.4 4.9-31.7 12.8-8.3 7.9-13.1 18.8-13.1 30.2v78.9c0 23.5 19.1 42.7 42.7 42.7h597.3c23.5 0 42.7-19.1 42.7-42.7v-78.9c0-11.4-4.8-22.3-13.1-30.2-8.3-7.9-19.4-12.8-31.7-12.8zM633.1 556c0-88.2-71.8-160-160-160s-160 71.8-160 160c0 88.2 71.8 160 160 160s160-71.8 160-160z"/></svg>',
+            // 设置
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 64a32 32 0 0 1 32 32v64a32 32 0 0 1-64 0V96a32 32 0 0 1 32-32zm0 768a32 32 0 0 1 32 32v64a32 32 0 1 1-64 0v-64a32 32 0 0 1 32-32zm448-384a32 32 0 0 1-32 32h-64a32 32 0 1 1 0-64h64a32 32 0 0 1 32 32zm-768 0a32 32 0 0 1-32 32H96a32 32 0 1 1 0-64h64a32 32 0 0 1 32 32zm678.4-192a32 32 0 0 1-22.4 9.6 32 32 0 0 1-22.4-54.4l45.2-45.2a32 32 0 0 1 45.2 45.2l-45.2 45.2zm-566.4 566.4a32 32 0 0 1-22.4 9.6 32 32 0 0 1-22.4-54.4l45.2-45.2a32 32 0 0 1 45.2 45.2l-45.2 45.2zm566.4 0a32 32 0 0 1-45.2-45.2l45.2-45.2a32 32 0 1 1 45.2 45.2l-45.2 45.2zm-566.4-566.4a32 32 0 0 1 45.2-45.2l45.2 45.2a32 32 0 0 1-45.2 45.2l-45.2-45.2zM512 192a320 320 0 1 0 0 640 320 320 0 0 0 0-640zm0 64a256 256 0 1 1 0 512 256 256 0 0 1 0-512z"/></svg>',
+            // 任务
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM513.1 518.1l-192 161c-5.2 4.4-13.1.7-13.1-6.1v-62.7c0-2.3 1.1-4.6 2.9-6.1L420.7 512l-109.8-92.2a7.95 7.95 0 0 1-2.9-6.1V351c0-6.8 7.9-10.5 13.1-6.1l192 160.9c3.9 3.2 3.9 9.1 0 12.3zM716 673c0 4.4-3.4 8-7.5 8h-185c-4.1 0-7.5-3.6-7.5-8v-48c0-4.4 3.4-8 7.5-8h185c4.1 0 7.5 3.6 7.5 8v48z"/></svg>',
+            // 监控
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 0 0 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 338.8 350.7 257 512 257c161.3 0 279.4 81.8 362.7 255C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z"/></svg>',
+            // 报表
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M832 464h-68V240c0-70.7-57.3-128-128-128H388c-70.7 0-128 57.3-128 128v224h-68c-17.7 0-32 14.3-32 32v384c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V496c0-17.7-14.3-32-32-32zM332 240c0-30.9 25.1-56 56-56h248c30.9 0 56 25.1 56 56v224H332V240zm460 600H232V536h560v304z"/><path d="M484 701v53c0 4.4 3.6 8 8 8h40c4.4 0 8-3.6 8-8v-53c12.1-8.7 20-22.9 20-39 0-26.5-21.5-48-48-48s-48 21.5-48 48c0 16.1 7.9 30.3 20 39z"/></svg>',
+            // 用户
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 512a192 192 0 1 0 0-384 192 192 0 0 0 0 384zm0 64a256 256 0 1 1 0-512 256 256 0 0 1 0 512zm320 320v-96a96 96 0 0 0-96-96H288a96 96 0 0 0-96 96v96a32 32 0 1 1-64 0v-96a160 160 0 0 1 160-160h448a160 160 0 0 1 160 160v96a32 32 0 1 1-64 0z"/></svg>',
+            // 权限
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"/><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"/></svg>',
+            // 日志
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M832 384H576V128H192v768h640V384zm-26.496-64L640 154.496V320h165.504zM160 64h448l256 256v608a32 32 0 0 1-32 32H160a32 32 0 0 1-32-32V96a32 32 0 0 1 32-32z"/><path d="M220 320h584v64H220zm0 192h584v64H220zm0 192h360v64H220z"/></svg>',
+            // 备份
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M296 392h64v64h-64zm0 190v160h128V582h-64v-62h-64v62zm80 48v64h-32v-64h32zm-16-302h192v64H360V328zm-64 256h320v64H296V584zm0-128h320v64H296V456zm544-88H616V192H136v752h752V368zM840 144H456l-64 64H136c-17.7 0-32 14.3-32 32v752c0 17.7 14.3 32 32 32h752c17.7 0 32-14.3 32-32V240c0-17.7-14.3-32-32-32z"/></svg>'
+        ];
+
+        // 二级菜单名称模板
+        const level2Names = [
+            '列表管理', '详情查看', '新增创建', '编辑修改', '删除操作',
+            '批量处理', '导入导出', '统计分析', '配置设置', '高级功能'
+        ];
+        
+        // 二级菜单图标（Ant Design 风格）
+        const level2Icons = [
+            // 列表管理
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM104 228a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0z"/></svg>',
+            // 详情查看
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"/><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"/></svg>',
+            // 新增创建
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"/><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"/></svg>',
+            // 编辑修改
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"/></svg>',
+            // 删除操作
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.1 0 62.3-26.9 63.9-61l24.7-523H896c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z"/></svg>',
+            // 批量处理
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM513.1 518.1l-192 161c-5.2 4.4-13.1.7-13.1-6.1v-62.7c0-2.3 1.1-4.6 2.9-6.1L420.7 512l-109.8-92.2a7.95 7.95 0 0 1-2.9-6.1V351c0-6.8 7.9-10.5 13.1-6.1l192 160.9c3.9 3.2 3.9 9.1 0 12.3zM716 673c0 4.4-3.4 8-7.5 8h-185c-4.1 0-7.5-3.6-7.5-8v-48c0-4.4 3.4-8 7.5-8h185c4.1 0 7.5 3.6 7.5 8v48z"/></svg>',
+            // 导入导出
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M888.3 757.4h-53.8c-4.2 0-7.7 3.5-7.7 7.7v61.8H197.1V197.1h629.8v61.8c0 4.2 3.5 7.7 7.7 7.7h53.8c4.2 0 7.7-3.6 7.7-7.7V158.7c0-17.3-14.6-31.9-31.9-31.9H158.7c-17.3 0-31.9 14.6-31.9 31.9v706.6c0 17.3 14.6 31.9 31.9 31.9h706.6c17.3 0 31.9-14.6 31.9-31.9V765.1c0-4.3-3.5-7.7-7.7-7.7zM902 142.8L656.7 388.1a31.96 31.96 0 0 1-45.2 0L465.2 251.3a31.96 31.96 0 0 1 0-45.2L709.5 1.5C722.6-11.7 742-4.4 742 14.3v80.3c0 5.9 2.3 11.7 6.5 15.8L891 260.2c32.1 32.1 32.1 84.2 0 116.3l-41.6 41.6c-8.3 8.3-19.3 12.9-30.9 12.9-11.6 0-22.6-4.6-30.9-12.9L670.2 285.6c-4.2-4.2-9.9-6.5-15.8-6.5h-80.3c-18.7 0-26-19.4-12.8-32.6l244.8-244.8c10.9-11 28-11 38.9 0l38.9 38.9c11 10.9 11 28 .1 38.9z"/></svg>',
+            // 统计分析
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6c-3.1-3.1-8.2-3.1-11.3 0l-230 229.1L461.4 404c-3.1-3.1-8.2-3.1-11.3 0L266.3 586.7c-3.1 3.1-3.1 8.2 0 11.3l39.5 39.7z"/></svg>',
+            // 配置设置
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 64a32 32 0 0 1 32 32v64a32 32 0 0 1-64 0V96a32 32 0 0 1 32-32zm0 768a32 32 0 0 1 32 32v64a32 32 0 1 1-64 0v-64a32 32 0 0 1 32-32zm448-384a32 32 0 0 1-32 32h-64a32 32 0 1 1 0-64h64a32 32 0 0 1 32 32zm-768 0a32 32 0 0 1-32 32H96a32 32 0 1 1 0-64h64a32 32 0 0 1 32 32zm678.4-192a32 32 0 0 1-22.4 9.6 32 32 0 0 1-22.4-54.4l45.2-45.2a32 32 0 0 1 45.2 45.2l-45.2 45.2zm-566.4 566.4a32 32 0 0 1-22.4 9.6 32 32 0 0 1-22.4-54.4l45.2-45.2a32 32 0 0 1 45.2 45.2l-45.2 45.2zm566.4 0a32 32 0 0 1-45.2-45.2l45.2-45.2a32 32 0 1 1 45.2 45.2l-45.2 45.2zm-566.4-566.4a32 32 0 0 1 45.2-45.2l45.2 45.2a32 32 0 0 1-45.2 45.2l-45.2-45.2zM512 192a320 320 0 1 0 0 640 320 320 0 0 0 0-640zm0 64a256 256 0 1 1 0 512 256 256 0 0 1 0-512z"/></svg>',
+            // 高级功能
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"/></svg>'
+        ];
+
+        // 三级菜单名称模板
+        const level3Names = [
+            '全部数据', '待处理', '进行中', '已完成', '已取消', '待审核',
+            '已审核', '待发布', '已发布', '草稿', '归档', '回收站',
+            '今日数据', '本周数据', '本月数据', '自定义', '高级筛选', '导出报表'
+        ];
+        
+        // 三级菜单图标（Ant Design 风格）
+        const level3Icons = [
+            // 全部数据
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM104 228a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0z"/></svg>',
+            // 待处理
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"/><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"/></svg>',
+            // 进行中
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 0 1-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z"/></svg>',
+            // 已完成
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"/></svg>',
+            // 已取消
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"/><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm165.1 101.8c-3.1-3.1-8.2-3.1-11.3 0L512 562.7 406.2 456.9c-3.1-3.1-8.2-3.1-11.3 0l-28.3 28.3c-3.1 3.1-3.1 8.2 0 11.3L472.7 602l-105.8 105.8c-3.1 3.1-3.1 8.2 0 11.3l28.3 28.3c3.1 3.1 8.2 3.1 11.3 0L512 633.3l105.8 105.8c3.1 3.1 8.2 3.1 11.3 0l28.3-28.3c3.1-3.1 3.1-8.2 0-11.3L551.3 602l105.8-105.8c3.1-3.1 3.1-8.2 0-11.3l-28.3-28.3z"/></svg>',
+            // 待审核
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"/><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"/></svg>',
+            // 已审核
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"/></svg>',
+            // 待发布
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"/><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"/></svg>',
+            // 已发布
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"/></svg>',
+            // 草稿
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M832 384H576V128H192v768h640V384zm-26.496-64L640 154.496V320h165.504zM160 64h448l256 256v608a32 32 0 0 1-32 32H160a32 32 0 0 1-32-32V96a32 32 0 0 1 32-32z"/></svg>',
+            // 归档
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M296 392h64v64h-64zm0 190v160h128V582h-64v-62h-64v62zm80 48v64h-32v-64h32zm-16-302h192v64H360V328zm-64 256h320v64H296V584zm0-128h320v64H296V456zm544-88H616V192H136v752h752V368zM840 144H456l-64 64H136c-17.7 0-32 14.3-32 32v752c0 17.7 14.3 32 32 32h752c17.7 0 32-14.3 32-32V240c0-17.7-14.3-32-32-32z"/></svg>',
+            // 回收站
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.1 0 62.3-26.9 63.9-61l24.7-523H896c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z"/></svg>',
+            // 今日数据
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zm0-448H184V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136z"/></svg>',
+            // 本周数据
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zm0-448H184V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136z"/></svg>',
+            // 本月数据
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zm0-448H184V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136z"/></svg>',
+            // 自定义
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"/><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"/></svg>',
+            // 高级筛选
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M880.1 154H143.9c-24.5 0-39.8 26.7-27.5 48L349 607.4V838c0 17.7 14.2 32 31.8 32h262.4c17.6 0 31.8-14.3 31.8-32V607.4L907.7 202c12.2-21.3-3.1-48-27.6-48zM603.4 798H420.6V650h182.9v148zm9.6-226.6l-8.4 14.6H419.3l-8.4-14.6L334.4 226h355.2L613 571.4z"/></svg>',
+            // 导出报表
+            '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M888.3 757.4h-53.8c-4.2 0-7.7 3.5-7.7 7.7v61.8H197.1V197.1h629.8v61.8c0 4.2 3.5 7.7 7.7 7.7h53.8c4.2 0 7.7-3.6 7.7-7.7V158.7c0-17.3-14.6-31.9-31.9-31.9H158.7c-17.3 0-31.9 14.6-31.9 31.9v706.6c0 17.3 14.6 31.9 31.9 31.9h706.6c17.3 0 31.9-14.6 31.9-31.9V765.1c0-4.3-3.5-7.7-7.7-7.7zM902 142.8L656.7 388.1a31.96 31.96 0 0 1-45.2 0L465.2 251.3a31.96 31.96 0 0 1 0-45.2L709.5 1.5C722.6-11.7 742-4.4 742 14.3v80.3c0 5.9 2.3 11.7 6.5 15.8L891 260.2c32.1 32.1 32.1 84.2 0 116.3l-41.6 41.6c-8.3 8.3-19.3 12.9-30.9 12.9-11.6 0-22.6-4.6-30.9-12.9L670.2 285.6c-4.2-4.2-9.9-6.5-15.8-6.5h-80.3c-18.7 0-26-19.4-12.8-32.6l244.8-244.8c10.9-11 28-11 38.9 0l38.9 38.9c11 10.9 11 28 .1 38.9z"/></svg>'
+        ];
+
+        // 生成菜单HTML
+        function generateMenu() {
+            const menuList = document.getElementById('menuList');
+            let html = '';
+
+            menuData.forEach((menuName, index) => {
+                html += `
+                    <div class="menu-item">
+                        <a href="#" class="menu-link">
+                            <span class="menu-icon">${menuIcons[index]}</span>
+                            <span>${menuName}</span>
+                        </a>
+                        <div class="submenu">
+                `;
+
+                // 生成10个二级菜单
+                for (let i = 0; i < 10; i++) {
+                    html += `
+                        <div class="submenu-item">
+                            <div class="submenu-indicator"></div>
+                            <a href="#" class="submenu-link">
+                                <span>
+                                    <span class="submenu-icon">${level2Icons[i]}</span>
+                                    ${level2Names[i]}
+                                </span>
+                                <span class="submenu-arrow">›</span>
+                            </a>
+                            <div class="submenu-level3">
+                    `;
+
+                    // 生成18个三级菜单
+                    for (let j = 0; j < 18; j++) {
+                        html += `
+                            <a href="#" class="submenu-level3-link">
+                                <span class="submenu-level3-icon">${level3Icons[j]}</span>
+                                <span>${level3Names[j]}</span>
+                            </a>
+                        `;
+                    }
+
+                    html += `
+                            </div>
+                        </div>
+                    `;
+                }
+
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+
+            menuList.innerHTML = html;
+        }
+
+        // 页面加载时生成菜单
+        generateMenu();
+
+        // 菜单搜索功能
+        const menuSearch = document.getElementById('menuSearch');
+        const searchResults = document.getElementById('searchResults');
+        let allMenuItems = [];
+
+        // 收集所有菜单项（用于搜索）
+        function collectMenuItems() {
+            allMenuItems = [];
+            const menuItems = document.querySelectorAll('.menu-item');
+            
+            menuItems.forEach(menuItem => {
+                const menuLink = menuItem.querySelector('.menu-link');
+                const menuName = menuLink ? menuLink.textContent.trim() : '';
+                const submenuItems = menuItem.querySelectorAll('.submenu-item');
+                
+                // 一级菜单
+                allMenuItems.push({
+                    level: 1,
+                    name: menuName,
+                    path: menuName,
+                    element: menuLink
+                });
+                
+                // 二级和三级菜单
+                submenuItems.forEach(subItem => {
+                    const subLink = subItem.querySelector('.submenu-link span');
+                    const subName = subLink ? subLink.textContent.trim() : '';
+                    const level3Items = subItem.querySelectorAll('.submenu-level3-link');
+                    
+                    // 二级菜单
+                    allMenuItems.push({
+                        level: 2,
+                        name: subName,
+                        path: `${menuName} > ${subName}`,
+                        element: subLink
+                    });
+                    
+                    // 三级菜单
+                    level3Items.forEach(level3Link => {
+                        const level3Name = level3Link.textContent.trim();
+                        allMenuItems.push({
+                            level: 3,
+                            name: level3Name,
+                            path: `${menuName} > ${subName} > ${level3Name}`,
+                            element: level3Link
+                        });
+                    });
+                });
+            });
+        }
+
+        // 搜索菜单
+        function searchMenus(keyword) {
+            if (!keyword || keyword.trim() === '') {
+                searchResults.classList.remove('show');
+                return;
+            }
+            
+            const results = allMenuItems.filter(item => 
+                item.name.toLowerCase().includes(keyword.toLowerCase()) ||
+                item.path.toLowerCase().includes(keyword.toLowerCase())
+            );
+            
+            if (results.length === 0) {
+                searchResults.innerHTML = '<div class="search-no-results">未找到匹配的菜单</div>';
+                searchResults.classList.add('show');
+                return;
+            }
+            
+            let html = '';
+            results.slice(0, 20).forEach(item => {
+                const levelClass = item.level === 1 ? 'font-weight: 600;' : item.level === 2 ? 'font-weight: 500;' : '';
+                html += `
+                    <div class="search-result-item" data-path="${item.path}">
+                        <div style="${levelClass}">${highlightKeyword(item.name, keyword)}</div>
+                        <div class="search-result-path">${highlightKeyword(item.path, keyword)}</div>
+                    </div>
+                `;
+            });
+            
+            searchResults.innerHTML = html;
+            searchResults.classList.add('show');
+            
+            // 添加点击事件
+            searchResults.querySelectorAll('.search-result-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const path = item.dataset.path;
+                    const menuItem = allMenuItems.find(m => m.path === path);
+                    if (menuItem && menuItem.element) {
+                        menuItem.element.click();
+                        menuSearch.value = '';
+                        searchResults.classList.remove('show');
+                    }
+                });
+            });
+        }
+
+        // 高亮关键词
+        function highlightKeyword(text, keyword) {
+            if (!keyword) return text;
+            const regex = new RegExp(`(${keyword})`, 'gi');
+            return text.replace(regex, '<mark style="background: rgba(57, 100, 254, 0.2); color: #3964fe; padding: 2px 4px; border-radius: 3px;">$1</mark>');
+        }
+
+        // 搜索输入事件
+        menuSearch.addEventListener('input', (e) => {
+            searchMenus(e.target.value);
+        });
+
+        // 点击外部关闭搜索结果
+        document.addEventListener('click', (e) => {
+            if (!menuSearch.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.classList.remove('show');
+            }
+        });
+
+        // 菜单生成后收集菜单项
+        setTimeout(() => {
+            collectMenuItems();
+        }, 100);
+
+        // 动态计算二级菜单位置
+        document.addEventListener('mouseenter', (e) => {
+            const menuItem = e.target.closest('.menu-item');
+            if (menuItem) {
+                // 取消所有菜单项的激活状态
+                document.querySelectorAll('.menu-item').forEach(m => m.classList.remove('active'));
+                
+                const submenu = menuItem.querySelector('.submenu');
+                if (submenu) {
+                    const rect = menuItem.getBoundingClientRect();
+                    submenu.style.left = rect.left + 'px';
+                    submenu.style.top = (rect.bottom + 2) + 'px';
+                }
+            }
+        }, true);
+        
+        // 鼠标离开菜单栏区域时，清除所有菜单项的激活状态
+        const menuBar = document.querySelector('.menu-bar');
+        if (menuBar) {
+            menuBar.addEventListener('mouseleave', (e) => {
+                // 清除所有菜单项的激活状态
+                document.querySelectorAll('.menu-item').forEach(m => m.classList.remove('active'));
+            });
+        }
+
+        // 选中状态跟随鼠标悬浮移动
+        let currentIndicator = null;
+        
+        document.addEventListener('mouseenter', (e) => {
+            const submenuItem = e.target.closest('.submenu-item');
+            if (submenuItem) {
+                const indicator = submenuItem.querySelector('.submenu-indicator');
+                if (indicator) {
+                    // 隐藏之前的指示条
+                    if (currentIndicator && currentIndicator !== indicator) {
+                        currentIndicator.style.height = '0';
+                        currentIndicator.style.top = '50%';
+                    }
+                    
+                    // 显示当前指示条
+                    const link = submenuItem.querySelector('.submenu-link');
+                    if (link) {
+                        const linkRect = link.getBoundingClientRect();
+                        const itemRect = submenuItem.getBoundingClientRect();
+                        const top = linkRect.top - itemRect.top;
+                        const height = linkRect.height;
+                        
+                        indicator.style.top = top + 'px';
+                        indicator.style.height = (height * 0.7) + 'px';
+                        currentIndicator = indicator;
+                    }
+                }
+            }
+        }, true);
+        
+        document.addEventListener('mouseleave', (e) => {
+            const submenuItem = e.target.closest('.submenu-item');
+            if (submenuItem) {
+                const indicator = submenuItem.querySelector('.submenu-indicator');
+                if (indicator && indicator === currentIndicator) {
+                    indicator.style.height = '0';
+                    currentIndicator = null;
+                }
+            }
+        }, true);
+
+        // 三级菜单智能定位：检测空间并自动调整位置
+        document.addEventListener('mouseenter', (e) => {
+            const submenuItem = e.target.closest('.submenu-item');
+            if (submenuItem) {
+                const level3 = submenuItem.querySelector('.submenu-level3');
+                if (level3) {
+                    // 确保菜单可见以获取尺寸
+                    const wasVisible = level3.style.visibility !== 'hidden';
+                    if (!wasVisible) {
+                        level3.style.visibility = 'visible';
+                        level3.style.opacity = '0';
+                        level3.style.pointerEvents = 'none';
+                    }
+                    
+                    const submenuItemRect = submenuItem.getBoundingClientRect();
+                    const submenu = submenuItem.closest('.submenu');
+                    if (submenu) {
+                        const windowWidth = window.innerWidth;
+                        // 获取三级菜单的实际宽度
+                        const level3Rect = level3.getBoundingClientRect();
+                        const level3Width = level3Rect.width || 600;
+                        // 三级菜单与二级菜单之间的间距
+                        const gap = 6;
+                        // 预留的安全边距（距离窗口边缘的最小距离）
+                        const safeMargin = 20;
+                        
+                        // 计算二级菜单项的右边界位置（相对于窗口）
+                        const submenuItemRight = submenuItemRect.right;
+                        
+                        // 计算如果三级菜单显示在右侧，其右边界会到达的位置
+                        const level3RightEdge = submenuItemRight + gap + level3Width;
+                        
+                        // 只有当三级菜单会超出窗口右边界时，才显示在左侧
+                        if (level3RightEdge > windowWidth - safeMargin) {
+                            level3.classList.add('show-left');
+                        } else {
+                            level3.classList.remove('show-left');
+                        }
+                        
+                        // 设置垂直位置，对齐到二级菜单项的顶部（相对于submenu-item）
+                        level3.style.top = '0px';
+                        
+                        // 恢复可见性
+                        if (!wasVisible) {
+                            level3.style.visibility = '';
+                            level3.style.opacity = '';
+                            level3.style.pointerEvents = '';
+                        }
+                    }
+                }
+            }
+        }, true);
+
+
+        // Tab切换功能
+        const tabItems = document.querySelectorAll('.tab-item');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        tabItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                // 如果点击的是关闭按钮，关闭tab
+                if (e.target.classList.contains('tab-close')) {
+                    e.stopPropagation();
+                    const tabId = item.dataset.tab;
+                    item.remove();
+                    document.getElementById(tabId).remove();
+                    // 激活第一个tab
+                    if (tabItems.length > 1) {
+                        const firstTab = document.querySelector('.tab-item');
+                        if (firstTab) {
+                            firstTab.click();
+                        }
+                    }
+                    return;
+                }
+
+                // 切换tab
+                const tabId = item.dataset.tab;
+                
+                // 移除所有active
+                tabItems.forEach(t => t.classList.remove('active'));
+                tabPanels.forEach(p => p.classList.remove('active'));
+                
+                // 激活当前tab
+                item.classList.add('active');
+                const panel = document.getElementById(tabId);
+                if (panel) {
+                    panel.classList.add('active');
+                }
+            });
+        });
+
+        // 添加新tab
+        document.querySelector('.tab-add').addEventListener('click', () => {
+            const tabId = 'merchant' + Date.now();
+            const tabBar = document.querySelector('.tab-bar');
+            const tabAdd = document.querySelector('.tab-add');
+            
+            const newTab = document.createElement('button');
+            newTab.className = 'tab-item';
+            newTab.dataset.tab = tabId;
+            newTab.innerHTML = `
+                <span>新标签页</span>
+                <span class="tab-close">×</span>
+            `;
+            
+            tabBar.insertBefore(newTab, tabAdd);
+            
+            const newPanel = document.createElement('div');
+            newPanel.className = 'tab-panel';
+            newPanel.id = tabId;
+            newPanel.innerHTML = `
+                <div class="content-header">
+                    <h1 class="content-title">新标签页</h1>
+                    <p class="content-subtitle">内容区域</p>
+                </div>
+            `;
+            
+            document.querySelector('.tab-content').appendChild(newPanel);
+            
+            // 激活新tab
+            newTab.click();
+        });
+
+        // 顶部菜单导航（使用事件委托，因为菜单是动态生成的）
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.menu-item > .menu-link')) {
+                e.preventDefault();
+                const menuItem = e.target.closest('.menu-item');
+                document.querySelectorAll('.menu-item').forEach(m => m.classList.remove('active'));
+                menuItem.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
