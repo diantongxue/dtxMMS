@@ -1,0 +1,332 @@
+.todoList {
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: 100%;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.contentTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 8px 0;
+}
+
+.contentSubtitle {
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+}
+
+/* 统计卡片 */
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.statTitle {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 12px;
+}
+
+.statValue {
+  font-size: 32px;
+  font-weight: 600;
+  color: #3964fe;
+  margin-bottom: 8px;
+}
+
+.statValueSuccess {
+  color: #52c41a;
+}
+
+.statValueWarning {
+  color: #faad14;
+}
+
+.statValueInfo {
+  color: #3964fe;
+}
+
+.statValueDanger {
+  color: #ff4d4f;
+}
+
+.statChange {
+  font-size: 12px;
+  color: #999999;
+}
+
+/* 筛选器 */
+.filterContainer {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filterLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.filterButtons:last-child {
+  margin-bottom: 0;
+}
+
+/* 列表容器 */
+.listContainer {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-height: 400px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999999;
+  font-size: 14px;
+}
+
+.todoItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.todoItem {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.todoItem:hover {
+  border-color: #3964fe;
+  box-shadow: 0 2px 8px rgba(57, 100, 254, 0.1);
+  transform: translateX(4px);
+}
+
+.todoItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.todoItemTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.completedIcon {
+  color: #52c41a;
+  font-size: 18px;
+}
+
+.processingIcon {
+  color: #3964fe;
+  font-size: 18px;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pendingIcon {
+  color: #faad14;
+  font-size: 18px;
+}
+
+.completedTitle {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.todoItemActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.todoItemDescription {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  padding-left: 26px;
+}
+
+.todoItemFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.todoItemMeta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #999999;
+}
+
+.overdue {
+  color: #ff4d4f;
+  font-weight: 500;
+}
+
+.todoItemTags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* 详情弹窗 */
+.detailContent {
+  padding: 8px 0;
+}
+
+.detailRow {
+  display: flex;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+
+.detailRow:last-child {
+  margin-bottom: 0;
+}
+
+.detailLabel {
+  font-weight: 500;
+  color: #666666;
+  min-width: 80px;
+  margin-right: 12px;
+}
+
+.detailValue {
+  color: #333333;
+  flex: 1;
+}
+
+.detailTags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .todoList {
+    padding: 16px;
+  }
+
+  .contentHeader {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .headerActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .statsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .todoItemHeader {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .todoItemActions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .todoItemFooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+
+

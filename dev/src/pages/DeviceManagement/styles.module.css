@@ -1,0 +1,113 @@
+/* 设备管理页面样式 */
+
+.deviceManagement {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.contentHeader {
+  margin-bottom: 24px;
+}
+
+.contentTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.contentSubtitle {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.filterBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.statistics {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.statistics span {
+  padding: 4px 12px;
+  background: #f9fafb;
+  border-radius: 4px;
+}
+
+.tableContainer {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.lowBattery {
+  color: #ff4d4f;
+  font-weight: 500;
+}
+
+/* 设备详情弹窗样式 */
+.deviceDetail {
+  padding: 8px 0;
+}
+
+.detailRow {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.detailRow:last-child {
+  border-bottom: none;
+}
+
+.detailLabel {
+  width: 120px;
+  font-weight: 500;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.detailValue {
+  flex: 1;
+  color: #1a1a1a;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .deviceManagement {
+    padding: 16px;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .statistics {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+
+
+

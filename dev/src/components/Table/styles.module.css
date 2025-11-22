@@ -1,0 +1,227 @@
+.tableContainer {
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toolbar {
+  padding: 12px 16px;
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.toolbar:hover {
+  background: #f5f5f5;
+}
+
+.toolbarButton {
+  transition: all 0.3s ease;
+  border-color: #d9d9d9;
+}
+
+.toolbarButton:hover {
+  border-color: #3964fe;
+  color: #3964fe;
+  transform: translateY(-1px);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.table {
+  width: 100%;
+}
+
+.table :global(.ant-table) {
+  font-size: 14px;
+}
+
+.table :global(.ant-table-thead > tr > th) {
+  background: #fafafa;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.table :global(.ant-table-thead > tr > th:hover) {
+  background: #f0f0f0;
+}
+
+.table :global(.ant-table-tbody > tr) {
+  transition: all 0.2s ease;
+}
+
+.table :global(.ant-table-tbody > tr:hover) {
+  background: #f5f7ff;
+}
+
+.table :global(.ant-table-tbody > tr.ant-table-row-selected) {
+  background: #e6f0ff;
+}
+
+.table :global(.ant-table-tbody > tr.ant-table-row-selected:hover) {
+  background: #d4e5ff;
+}
+
+.table :global(.ant-table-tbody > tr > td) {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 12px 16px;
+}
+
+.table :global(.ant-pagination) {
+  margin: 16px;
+  text-align: right;
+}
+
+.table :global(.ant-pagination-item) {
+  transition: all 0.3s ease;
+}
+
+.table :global(.ant-pagination-item:hover) {
+  border-color: #3964fe;
+}
+
+.table :global(.ant-pagination-item-active) {
+  background: #3964fe;
+  border-color: #3964fe;
+}
+
+.table :global(.ant-pagination-item-active a) {
+  color: #fff;
+}
+
+.table :global(.ant-pagination-item-active:hover) {
+  background: #2d52e6;
+  border-color: #2d52e6;
+}
+
+.table :global(.ant-pagination-prev:hover .ant-pagination-item-link),
+.table :global(.ant-pagination-next:hover .ant-pagination-item-link) {
+  border-color: #3964fe;
+  color: #3964fe;
+}
+
+.table :global(.ant-table-filter-trigger) {
+  transition: all 0.3s ease;
+}
+
+.table :global(.ant-table-filter-trigger:hover) {
+  color: #3964fe;
+}
+
+.table :global(.ant-table-column-sorter) {
+  transition: all 0.3s ease;
+}
+
+.table :global(.ant-table-column-sorter:hover) {
+  color: #3964fe;
+}
+
+/* 空状态样式 */
+.emptyState {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.emptyIcon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  opacity: 0.6;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.emptyText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.emptyDescription {
+  font-size: 14px;
+  color: #999;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .toolbar {
+    padding: 8px 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .toolbarButton {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .table :global(.ant-table-tbody > tr > td) {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .table :global(.ant-pagination) {
+    margin: 12px;
+  }
+}
+
+/* 虚拟滚动容器样式 */
+.virtualScrollContainer {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.virtualScrollRow {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s ease;
+}
+
+.virtualScrollRow:hover {
+  background: #f5f7ff;
+}
+
+.virtualScrollCell {
+  padding: 12px 16px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+
+

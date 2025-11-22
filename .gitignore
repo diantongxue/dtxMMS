@@ -35,3 +35,7 @@ release
 docs/
 *.doc
 *.docx
+
+# 文件分类规范：server和AI-docs不上传到GitHub
+server/
+AI-docs/
