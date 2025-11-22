@@ -36,13 +36,17 @@ if (!canContinue) {
 
 ```bash
 # 检查开发流程
-node scripts/check-constitution.js write_code
+node scripts/check-constitution.cjs write_code
+# 或使用npm脚本
+npm run check:constitution write_code
 
 # 检查文件
-node scripts/check-constitution.js check_file src/App.tsx
+node scripts/check-constitution.cjs check_file src/App.tsx
+# 或使用npm脚本
+npm run check:constitution:file src/App.tsx
 
 # 设置环境变量（表示需求已确认）
-REQUIREMENT_CONFIRMED=true node scripts/check-constitution.js write_code
+REQUIREMENT_CONFIRMED=true node scripts/check-constitution.cjs write_code
 ```
 
 ## 检查规则

@@ -316,9 +316,3 @@ class ConstitutionChecker {
 
 export default ConstitutionChecker;
 
-// 如果直接运行此文件
-if (require.main === module) {
-  const checker = new ConstitutionChecker();
-  console.log(checker.generateReport());
-}
-

@@ -140,7 +140,7 @@ const DeviceManagement: React.FC = () => {
     loadDevices();
     // loadDevices 在 useEffect 内部定义，不需要添加到依赖数组
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, []); // 空依赖数组表示只在组件挂载时执行一次
 
   // 搜索和筛选
   useEffect(() => {
