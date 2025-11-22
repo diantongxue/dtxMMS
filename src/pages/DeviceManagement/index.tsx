@@ -135,12 +135,11 @@ const DeviceManagement: React.FC = () => {
       setDevices(mockDevices);
       setFilteredDevices(mockDevices);
       setIsLoading(false);
-    };
-
-    loadDevices();
-    // loadDevices 在 useEffect 内部定义，使用 useCallback 包装或添加 eslint-disable
-     
   }, []);
+
+  useEffect(() => {
+    loadDevices();
+  }, [loadDevices]);
 
   // 搜索和筛选
   useEffect(() => {
