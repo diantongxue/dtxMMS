@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Modal, Table, Button, Tag, Popconfirm, message } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { LogoutOutlined, DesktopOutlined } from '@ant-design/icons';
@@ -86,15 +86,8 @@ const DeviceManagementModal: React.FC<DeviceManagementModalProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [devices, setDevices] = useState<Device[]>([]);
 
-  useEffect(() => {
-    if (visible && userId) {
-      loadDevices();
-    } else {
-      setDevices([]);
-    }
-  }, [visible, userId]);
-
-  const loadDevices = async () => {
+  // 遵循宪法.md第13.1.6节React规范：使用useCallback优化性能
+  const loadDevices = useCallback(async () => {
     setIsLoading(true);
     // 模拟API请求延迟
     await new Promise(resolve => setTimeout(resolve, 500));
