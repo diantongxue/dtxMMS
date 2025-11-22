@@ -94,7 +94,15 @@ const DeviceManagementModal: React.FC<DeviceManagementModalProps> = ({
     const userDevices = mockDevices[userId || ''] || [];
     setDevices(userDevices);
     setIsLoading(false);
-  };
+  }, [userId]);
+
+  useEffect(() => {
+    if (visible && userId) {
+      loadDevices();
+    } else {
+      setDevices([]);
+    }
+  }, [visible, userId, loadDevices]);
 
   // 处理踢出设备
   const handleKickOut = (deviceId: string) => {
