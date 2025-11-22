@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Skeleton from '../../components/Skeleton';
-import { useTab } from '../PAGE_MAIN_LAYOUT/contexts/TabContext';
+import { useTab } from '../MainLayout/contexts/TabContext';
 // 遵循宪法.md第3.1节按钮模块结构规范：页面文件只负责按编号 import 按钮模块并组合
 import PAGE_MERCHANT_PREVIEW_BTN02 from './PAGE_MERCHANT_PREVIEW_BTN02/PAGE_MERCHANT_PREVIEW_BTN02';
 import PAGE_MERCHANT_PREVIEW_BTN03 from './PAGE_MERCHANT_PREVIEW_BTN03/PAGE_MERCHANT_PREVIEW_BTN03';
