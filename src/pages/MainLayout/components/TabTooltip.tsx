@@ -72,6 +72,8 @@ const TabTooltip: React.FC<TabTooltipProps> = ({ tab, position, onClose }) => {
         }
 
         setAdjustedPosition({ x: left, y: top });
+        // viewportWidth 和 viewportHeight 是动态获取的，不需要添加到依赖数组
+         
     }, [position]);
 
     // 如果没有菜单路径，不显示提示

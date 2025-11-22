@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Table, Input, Button, Space, Tag, Modal, message } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import {
@@ -138,6 +138,8 @@ const DeviceManagement: React.FC = () => {
     };
 
     loadDevices();
+    // loadDevices 在 useEffect 内部定义，使用 useCallback 包装或添加 eslint-disable
+     
   }, []);
 
   // 搜索和筛选

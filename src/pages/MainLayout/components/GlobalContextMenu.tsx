@@ -75,6 +75,8 @@ const GlobalContextMenu: React.FC<GlobalContextMenuProps> = ({
       menu.style.left = `${newLeft}px`;
       menu.style.top = `${newTop}px`;
     }
+    // viewportWidth 和 viewportHeight 是常量，不需要添加到依赖数组
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [position]);
 
   const handleClick = (e: React.MouseEvent, action: () => void) => {

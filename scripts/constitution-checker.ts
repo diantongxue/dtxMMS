@@ -138,7 +138,7 @@ class ConstitutionChecker {
         // 检查函数是否有类型定义
         const functionMatches = content.match(/function\s+\w+\s*\([^)]*\)/g);
         if (functionMatches) {
-          functionMatches.forEach((func, index) => {
+          functionMatches.forEach((func, _index) => {
             if (!/:.*=>|:\s*\w+/g.test(func)) {
               results.push({
                 passed: false,
@@ -189,7 +189,8 @@ class ConstitutionChecker {
   /**
    * 检查开发流程是否符合宪法规则
    */
-  checkDevelopmentProcess(action: string, context?: any): RuleCheckResult[] {
+  // 遵循宪法.md第13.1.1节TypeScript规范：禁止使用any类型
+  checkDevelopmentProcess(action: string, context?: unknown): RuleCheckResult[] {
     const results: RuleCheckResult[] = [];
 
     // 检查是否在需求确认前就开始编码
@@ -254,7 +255,8 @@ class ConstitutionChecker {
   /**
    * 在执行下一个动作前进行检查和提醒
    */
-  async checkBeforeNextAction(nextAction: string, context?: any): Promise<boolean> {
+  // 遵循宪法.md第13.1.1节TypeScript规范：禁止使用any类型
+  async checkBeforeNextAction(nextAction: string, context?: unknown): Promise<boolean> {
     const processResults = this.checkDevelopmentProcess(nextAction, context);
     
     const errors = processResults.filter(r => r.severity === 'error');

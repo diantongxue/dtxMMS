@@ -379,7 +379,6 @@ const ApprovalProcess: React.FC = () => {
   };
 
   // 打开操作弹窗（撤回/转办/委托）（保留用于未来扩展）
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   // const _handleOpenActionModal = (
   //   _type: 'withdraw' | 'transfer' | 'delegate'
   // ) => {

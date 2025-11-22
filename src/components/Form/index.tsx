@@ -202,7 +202,9 @@ export default Form;
 
 /**
  * 导出表单 Hook，方便在子组件中使用
+ * 注意：此导出会导致 Fast refresh 警告，但这是必要的工具函数导出
  */
+// eslint-disable-next-line react-refresh/only-export-components
 export { useFormContext } from 'react-hook-form';
 
 /**

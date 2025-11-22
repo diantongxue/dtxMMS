@@ -268,6 +268,8 @@ const MerchantPreview: React.FC = () => {
         electronAPI.browserView.removeAllListeners('browser-view:load-failed');
       }
     };
+    // updateNavigationState 是稳定的函数，不需要添加到依赖数组
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [electronAPI]);
 
   // 获取当前选中的浏览器实例（必须在所有使用它的地方之前定义）
@@ -303,7 +305,9 @@ const MerchantPreview: React.FC = () => {
       window.removeEventListener('resize', updateBounds);
       window.removeEventListener('scroll', updateBounds);
     };
-  }, [electronAPI, currentBrowserViewIdRef.current]);
+    // currentBrowserViewIdRef.current 是可变值，不应该在依赖数组中
+     
+  }, [electronAPI]);
 
   // 当选中浏览器改变时，创建或更新 BrowserView
   useEffect(() => {

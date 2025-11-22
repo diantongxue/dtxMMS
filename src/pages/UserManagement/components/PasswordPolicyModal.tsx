@@ -27,13 +27,6 @@ const PasswordPolicyModal: React.FC<PasswordPolicyModalProps> = ({
   const [form] = Form.useForm();
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    if (visible) {
-      // 加载当前密码策略配置
-      loadPolicy();
-    }
-  }, [visible]);
-
   const loadPolicy = async () => {
     setIsLoading(true);
     // 模拟API请求延迟
@@ -41,6 +34,14 @@ const PasswordPolicyModal: React.FC<PasswordPolicyModalProps> = ({
     form.setFieldsValue(defaultPolicy);
     setIsLoading(false);
   };
+
+  useEffect(() => {
+    if (visible) {
+      // 加载当前密码策略配置
+      loadPolicy();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [visible]);
 
   // 处理保存
   const handleSave = async () => {
