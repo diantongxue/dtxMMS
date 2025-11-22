@@ -116,9 +116,10 @@ if (require.main !== module) {
   // 命令行使用
   const args = process.argv.slice(2);
   if (args.length === 0) {
-    console.log('用法: node check-constitution.js <action> [file]');
-    console.log('示例: node check-constitution.js write_code');
-    console.log('示例: node check-constitution.js check_file src/App.tsx');
+    console.log('用法: node check-constitution.cjs <action> [file]');
+    console.log('示例: node check-constitution.cjs write_code');
+    console.log('示例: node check-constitution.cjs check_file src/App.tsx');
+    console.log('或使用npm脚本: npm run check:constitution <action>');
     process.exit(0);
   }
 
