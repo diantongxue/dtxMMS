@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { Table, Input, Button, Space, Tag, Modal, message } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import {
@@ -135,11 +135,12 @@ const DeviceManagement: React.FC = () => {
       setDevices(mockDevices);
       setFilteredDevices(mockDevices);
       setIsLoading(false);
-  }, []);
+    };
 
-  useEffect(() => {
     loadDevices();
-  }, [loadDevices]);
+    // loadDevices 在 useEffect 内部定义，不需要添加到依赖数组
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // 搜索和筛选
   useEffect(() => {
