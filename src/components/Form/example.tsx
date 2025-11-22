@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Input, InputNumber, Select, DatePicker, Switch, TextArea } from 'antd';
+import { Input, InputNumber, Select, DatePicker, Switch } from 'antd';
 import Form, { FormField } from './index';
 import { z } from 'zod';
 
@@ -18,7 +18,7 @@ export const BasicFormExample: React.FC = () => {
   const handleSubmit = async (values: z.infer<typeof basicSchema>) => {
     console.log('提交数据:', values);
     // 模拟 API 调用
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
   };
 
   return (
@@ -42,9 +42,7 @@ export const BasicFormExample: React.FC = () => {
 const complexSchema = z.object({
   name: z.string().min(2, '姓名至少2个字符'),
   age: z.number().min(18, '年龄必须大于18岁').max(100, '年龄不能超过100岁'),
-  gender: z.enum(['male', 'female'], {
-    errorMap: () => ({ message: '请选择性别' }),
-  }),
+  gender: z.enum(['male', 'female'] as const),
   birthday: z.date().optional(),
   active: z.boolean(),
   description: z.string().max(500, '描述不能超过500个字符').optional(),
@@ -53,7 +51,7 @@ const complexSchema = z.object({
 export const ComplexFormExample: React.FC = () => {
   const handleSubmit = async (values: z.infer<typeof complexSchema>) => {
     console.log('提交数据:', values);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
   };
 
   return (
@@ -100,12 +98,7 @@ export const ComplexFormExample: React.FC = () => {
       </FormField>
 
       <FormField name="description" label="描述" help="最多500个字符">
-        <TextArea
-          rows={4}
-          placeholder="请输入描述"
-          maxLength={500}
-          showCount
-        />
+        <Input.TextArea rows={4} placeholder="请输入描述" maxLength={500} showCount />
       </FormField>
     </Form>
   );
@@ -115,7 +108,7 @@ export const ComplexFormExample: React.FC = () => {
 export const CustomButtonFormExample: React.FC = () => {
   const handleSubmit = async (values: z.infer<typeof basicSchema>) => {
     console.log('提交数据:', values);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
   };
 
   const handleCancel = () => {
@@ -160,7 +153,7 @@ const passwordSchema = z
       .regex(/[0-9]/, '密码必须包含数字'),
     confirmPassword: z.string(),
   })
-  .refine((data) => data.password === data.confirmPassword, {
+  .refine(data => data.password === data.confirmPassword, {
     message: '两次密码输入不一致',
     path: ['confirmPassword'],
   });
@@ -168,7 +161,7 @@ const passwordSchema = z
 export const PasswordFormExample: React.FC = () => {
   const handleSubmit = async (values: z.infer<typeof passwordSchema>) => {
     console.log('提交数据:', values);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
   };
 
   return (
@@ -192,7 +185,7 @@ export const PasswordFormExample: React.FC = () => {
 export const ValidationModeExample: React.FC = () => {
   const handleSubmit = async (values: z.infer<typeof basicSchema>) => {
     console.log('提交数据:', values);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
   };
 
   return (
@@ -212,4 +205,3 @@ export const ValidationModeExample: React.FC = () => {
     </Form>
   );
 };
-

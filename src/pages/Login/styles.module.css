@@ -1,0 +1,688 @@
+/* 登录页面样式 */
+
+.loginPage {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+  background: #0a0e27;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 科技感背景 */
+.bgDecoration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* 网格背景 */
+.bgGrid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(57, 100, 254, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 100, 254, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* 科技线条 */
+.techLine {
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(57, 100, 254, 0.5),
+    transparent
+  );
+  animation: lineMove 8s linear infinite;
+}
+
+.techLine1 {
+  width: 2px;
+  height: 200px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.techLine2 {
+  width: 200px;
+  height: 2px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.techLine3 {
+  width: 2px;
+  height: 150px;
+  bottom: 15%;
+  left: 80%;
+  animation-delay: 4s;
+}
+
+@keyframes lineMove {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scaleY(0) scaleX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+/* 光晕效果 */
+.bgGlow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+.bgGlow1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(57, 100, 254, 0.3);
+  top: -200px;
+  right: -200px;
+  animation-delay: 0s;
+}
+
+.bgGlow2 {
+  width: 300px;
+  height: 300px;
+  background: rgba(57, 100, 254, 0.2);
+  bottom: -150px;
+  left: -150px;
+  animation-delay: 2s;
+}
+
+.bgGlow3 {
+  width: 250px;
+  height: 250px;
+  background: rgba(91, 124, 254, 0.25);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 1s;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* 粒子效果 */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(57, 100, 254, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(57, 100, 254, 0.8);
+  animation: particleFloat 15s infinite ease-in-out;
+}
+
+@keyframes particleFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(100px, -100px) scale(1.5);
+    opacity: 0.8;
+  }
+}
+
+/* 扫描线效果 */
+.scanLine {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(57, 100, 254, 0.8),
+    transparent
+  );
+  top: 0;
+  animation: scanMove 3s linear infinite;
+  box-shadow: 0 0 10px rgba(57, 100, 254, 0.5);
+}
+
+@keyframes scanMove {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+/* 数据流效果 */
+.dataStream {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(57, 100, 254, 0.8),
+    transparent
+  );
+  animation: streamMove 4s linear infinite;
+}
+
+.dataStream1 {
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.dataStream2 {
+  left: 45%;
+  animation-delay: 1s;
+}
+
+.dataStream3 {
+  left: 75%;
+  animation-delay: 2s;
+}
+
+@keyframes streamMove {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+/* 六边形装饰 */
+.hexagon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(57, 100, 254, 0.1);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+  animation: hexRotate 20s linear infinite;
+  border: 1px solid rgba(57, 100, 254, 0.3);
+}
+
+.hexagon1 {
+  top: 10%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.hexagon2 {
+  bottom: 15%;
+  left: 8%;
+  animation-delay: 5s;
+}
+
+@keyframes hexRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.3;
+  }
+}
+
+.loginContainer {
+  width: 100%;
+  max-width: 420px;
+  background: #3964fe;
+  border-radius: 20px;
+  box-shadow:
+    0 20px 60px rgba(57, 100, 254, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  padding: 48px 40px;
+  position: relative;
+  z-index: 1;
+  animation: slideUp 0.6s ease-out;
+  transform-origin: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.loginContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.loginHeader {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 0.8s ease-out 0.2s both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loginLogo {
+  margin: 0 auto 20px;
+  animation: logoPulse 2s ease-in-out infinite;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes logoPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.loginTitle {
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  width: 100%;
+}
+
+.loginSubtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+.loginForm {
+  margin-top: 32px;
+  animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.formLabel {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.formInputWrapper {
+  position: relative;
+}
+
+.formInput {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px 0 16px;
+  padding-right: 48px;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  position: relative;
+}
+
+.formInput:focus {
+  border-color: #ffffff;
+  box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.formInput:not(:placeholder-shown) {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.formInput::placeholder {
+  color: #9ca3af;
+  transition: opacity 0.3s;
+}
+
+.formInput:focus::placeholder {
+  opacity: 0.5;
+}
+
+.formInput.error {
+  border-color: #ff6b6b;
+  animation: shake 0.5s;
+}
+
+.formInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 输入框图标 */
+.inputIcon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  transition: all 0.3s;
+  pointer-events: none;
+  color: #3964fe;
+}
+
+.formInput:focus + .inputIcon {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.loginButton {
+  width: 100%;
+  height: 48px;
+  background: #ffffff;
+  color: #3964fe;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(57, 100, 254, 0.1);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s,
+    height 0.6s;
+}
+
+.loginButton:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.loginButton:hover:not(:disabled)::before {
+  width: 300px;
+  height: 300px;
+}
+
+.loginButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.loginButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.loginButton.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.loginButton.loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid #3964fe;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.buttonText {
+  position: relative;
+  z-index: 1;
+}
+
+.formOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rememberMe:hover {
+  color: #ffffff;
+}
+
+.rememberMe input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #ffffff;
+  transition: all 0.2s;
+}
+
+.rememberMe input[type='checkbox']:checked {
+  transform: scale(1.1);
+}
+
+.rememberMe input[type='checkbox']:disabled {
+  cursor: not-allowed;
+}
+
+.forgotPassword {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.forgotPassword::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s;
+}
+
+.forgotPassword:hover {
+  color: #ffffff;
+}
+
+.forgotPassword:hover::after {
+  width: 100%;
+}
+
+.loginFooter {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  animation: fadeIn 0.8s ease-out 0.8s both;
+}
+
+/* 错误提示 */
+.errorMessage {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #ff6b6b;
+  display: none;
+  animation: shake 0.5s;
+}
+
+.errorMessage.show {
+  display: block;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .loginContainer {
+    padding: 32px 24px;
+    max-width: 100%;
+  }
+
+  .loginTitle {
+    font-size: 22px;
+  }
+
+  .loginSubtitle {
+    font-size: 13px;
+  }
+}

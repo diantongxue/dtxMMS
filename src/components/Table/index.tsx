@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback } from 'react';
+import { useMemo, useCallback } from 'react';
 import { Table as AntTable, Button, Space, Tooltip } from 'antd';
 import type { TableProps, ColumnType } from 'antd/es/table';
 import { DownloadOutlined, ReloadOutlined } from '@ant-design/icons';
@@ -8,16 +8,16 @@ import styles from './styles.module.css';
 // 导出文件类型
 export type ExportType = 'excel' | 'csv' | 'json';
 
-// 表格列配置扩展
-export interface TableColumnType<T = any> extends ColumnType<T> {
+// 表格列配置扩展（遵循宪法.md第13.1.1节TypeScript规范：禁止使用any类型）
+export interface TableColumnType<T extends Record<string, unknown> = Record<string, unknown>> extends ColumnType<T> {
   // 是否支持导出（默认true）
   exportable?: boolean;
   // 导出时的列名（默认使用title）
   exportTitle?: string;
 }
 
-// 表格组件Props
-export interface CommonTableProps<T = any>
+// 表格组件Props（遵循宪法.md第13.1.1节TypeScript规范：禁止使用any类型）
+export interface CommonTableProps<T extends Record<string, unknown> = Record<string, unknown>>
   extends Omit<TableProps<T>, 'columns'> {
   // 列配置
   columns: TableColumnType<T>[];
@@ -44,15 +44,17 @@ export interface CommonTableProps<T = any>
 /**
  * 通用表格组件
  * 支持排序、筛选、分页、虚拟滚动、导出等功能
+ * 遵循宪法.md第13.1.6节React规范：函数式组件、类型安全
  */
-function CommonTable<T extends Record<string, any> = any>({
+function CommonTable<T extends Record<string, unknown> = Record<string, unknown>>({
   columns,
   dataSource = [],
   loading = false,
   showExport = true,
   onExport,
   enableVirtualScroll,
-  virtualRowHeight = 32,
+  // virtualRowHeight 参数保留用于未来扩展，目前未使用
+  // virtualRowHeight = 32,
   onRefresh,
   emptyText = '暂无数据',
   emptyDescription,
@@ -85,10 +87,10 @@ function CommonTable<T extends Record<string, any> = any>({
       if (onExport) {
         onExport(type);
       } else {
-        // 默认导出实现
+        // 默认导出实现（遵循宪法.md第13.1.1节TypeScript规范：禁止使用any类型）
         const exportColumns = columns.filter(col => col.exportable !== false);
         const exportData = dataSource.map(item => {
-          const row: Record<string, any> = {};
+          const row: Record<string, unknown> = {};
           exportColumns.forEach(col => {
             const key = col.dataIndex as string;
             const value = item[key];
@@ -138,10 +140,14 @@ function CommonTable<T extends Record<string, any> = any>({
     [onExport, columns, dataSource]
   );
 
-  // 处理刷新
+  // 处理刷新（遵循宪法.md第6节错误处理规范：所有异步操作必须有错误处理）
   const handleRefresh = useCallback(() => {
-    if (onRefresh) {
-      onRefresh();
+    try {
+      if (onRefresh) {
+        onRefresh();
+      }
+    } catch (error) {
+      console.error('Failed to refresh table:', error);
     }
   }, [onRefresh]);
 
@@ -229,13 +235,15 @@ function CommonTable<T extends Record<string, any> = any>({
           pagination={defaultPagination}
           scroll={scrollConfig}
           rowKey={(record, index) => {
+            // 遵循宪法.md第13.1.6节React规范：列表渲染必须使用key属性，key值必须唯一且稳定
             if (restProps.rowKey) {
               if (typeof restProps.rowKey === 'function') {
-                return restProps.rowKey(record, index);
+                return restProps.rowKey(record, index ?? 0);
               }
-              return record[restProps.rowKey];
+              const key = restProps.rowKey as keyof T;
+              return String(record[key] ?? `row-${index ?? 0}`);
             }
-            return index?.toString() || `row-${index}`;
+            return index?.toString() ?? `row-${index ?? 0}`;
           }}
           locale={{
             emptyText: (

@@ -1,70 +1,41 @@
+import React from 'react';
 import { Button, ButtonProps } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-import React from 'react';
 import styles from './styles.module.css';
 
-interface ButtonLoadingProps extends Omit<ButtonProps, 'loading'> {
+/**
+ * 按钮加载组件Props
+ * 遵循宪法.md第13.1.1节TypeScript规范：所有函数参数和返回值必须有类型定义
+ */
+export interface ButtonLoadingProps extends ButtonProps {
   /** 是否显示加载状态 */
   loading?: boolean;
   /** 加载时显示的文本 */
   loadingText?: string;
-  /** 加载图标位置 */
-  loadingPosition?: 'left' | 'right';
 }
 
 /**
  * 按钮加载组件
- * 增强Ant Design Button的加载状态显示
+ * 遵循宪法.md第13.1.6节React规范：函数式组件、类型安全
  */
 const ButtonLoading: React.FC<ButtonLoadingProps> = ({
   loading = false,
   loadingText,
-  loadingPosition = 'left',
   children,
-  icon,
-  className = '',
   disabled,
   ...restProps
 }) => {
-  const renderIcon = () => {
-    if (loading) {
-      return <LoadingOutlined className={styles.loadingIcon} spin />;
-    }
-    return icon;
-  };
-
-  const renderContent = () => {
-    if (loading && loadingText) {
-      return (
-        <span className={styles.buttonContent}>
-          {loadingPosition === 'left' && renderIcon()}
-          <span>{loadingText}</span>
-          {loadingPosition === 'right' && renderIcon()}
-        </span>
-      );
-    }
-    if (loadingPosition === 'right' && loading) {
-      return (
-        <span className={styles.buttonContent}>
-          <span>{children}</span>
-          {renderIcon()}
-        </span>
-      );
-    }
-    return children;
-  };
-
   return (
     <Button
       {...restProps}
-      className={`${styles.buttonLoading} ${className}`}
       disabled={disabled || loading}
-      icon={loadingPosition === 'left' ? renderIcon() : icon}
-      loading={false}
+      className={`${styles.buttonLoading} ${restProps.className || ''}`}
     >
-      {renderContent()}
+      {loading && <LoadingOutlined className={styles.loadingIcon} spin />}
+      {loading ? loadingText || children : children}
     </Button>
   );
 };
 
 export default ButtonLoading;
+

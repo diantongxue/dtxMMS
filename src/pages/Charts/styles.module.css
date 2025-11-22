@@ -1,0 +1,103 @@
+/* 图表展示页面样式 */
+
+.chartsPage {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  overflow-y: auto;
+  background: #f5f7fa;
+}
+
+.contentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.contentTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.contentSubtitle {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.chartWrapper {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.chartCard {
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.chartCard :global(.ant-card-body) {
+  padding: 0;
+}
+
+.chartCard :global(.ant-tabs) {
+  padding: 0 24px;
+}
+
+.chartCard :global(.ant-tabs-tab) {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.chartCard :global(.ant-tabs-tab:hover) {
+  color: #3964fe;
+}
+
+.chartCard :global(.ant-tabs-tab-active) {
+  color: #3964fe;
+}
+
+.chartCard :global(.ant-tabs-tab-active .ant-tabs-tab-btn) {
+  color: #3964fe;
+  font-weight: 600;
+}
+
+.chartCard :global(.ant-tabs-ink-bar) {
+  background: #3964fe;
+  height: 2px;
+}
+
+.chartContainer {
+  width: 100%;
+  height: 500px;
+  min-height: 400px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .chartsPage {
+    padding: 16px;
+  }
+
+  .contentHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chartContainer {
+    height: 400px;
+  }
+}
+
+
+
+
+

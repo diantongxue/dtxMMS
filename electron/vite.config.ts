@@ -15,11 +15,21 @@ export default defineConfig({
       formats: ['cjs'],
     },
     rollupOptions: {
-      external: ['electron'],
+      external: [
+        'electron',
+        'path',
+        'url',
+        'fs',
+        'os',
+        'crypto',
+        'util',
+        'stream',
+        'events',
+        'buffer',
+      ],
       output: {
-        entryFileNames: '[name].js',
+        entryFileNames: '[name].cjs',
       },
     },
   },
 });
-

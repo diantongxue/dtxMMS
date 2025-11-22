@@ -20,6 +20,7 @@ export interface FormFieldProps extends Omit<FormItemProps, 'name'> {
 /**
  * 表单字段组件
  * 集成 React Hook Form 和 Ant Design Form
+ * 遵循宪法.md第13.1.6节React规范：函数式组件、类型安全
  */
 export const FormField: React.FC<FormFieldProps> = ({
   name,
@@ -34,8 +35,9 @@ export const FormField: React.FC<FormFieldProps> = ({
     trigger,
   } = useFormContext();
 
+  // 遵循宪法.md第13.1.1节TypeScript规范：必须处理可能为null或undefined的值
   const error = errors[name];
-  const hasError = !!error;
+  const hasError = Boolean(error);
 
   return (
     <AntForm.Item
@@ -48,26 +50,44 @@ export const FormField: React.FC<FormFieldProps> = ({
         name={name}
         control={control}
         render={({ field }) => {
-          // 处理不同类型的输入组件
-          const handleChange = (e: React.ChangeEvent<HTMLInputElement> | unknown) => {
-            const value = (e as React.ChangeEvent<HTMLInputElement>)?.target?.value !== undefined 
-              ? (e as React.ChangeEvent<HTMLInputElement>).target.value 
-              : e;
-            field.onChange(value);
-            if (validateOnChange) {
-              // 触发验证
-              trigger(name);
+          // 处理不同类型的输入组件（遵循宪法.md第6节错误处理规范）
+          const handleChange = (
+            e: React.ChangeEvent<HTMLInputElement> | unknown
+          ): void => {
+            try {
+              const value =
+                (e as React.ChangeEvent<HTMLInputElement>)?.target?.value !==
+                undefined
+                  ? (e as React.ChangeEvent<HTMLInputElement>).target.value
+                  : e;
+              field.onChange(value);
+              if (validateOnChange) {
+                // 触发验证
+                trigger(name).catch((error: unknown) => {
+                  console.error('Validation trigger failed:', error);
+                });
+              }
+              children.props.onChange?.(e);
+            } catch (error) {
+              console.error('Form field change handler error:', error);
             }
-            children.props.onChange?.(e);
           };
 
-          const handleBlur = (e: React.FocusEvent<HTMLInputElement> | unknown) => {
-            field.onBlur();
-            if (validateOnBlur) {
-              // 触发验证
-              trigger(name);
+          const handleBlur = (
+            e: React.FocusEvent<HTMLInputElement> | unknown
+          ): void => {
+            try {
+              field.onBlur();
+              if (validateOnBlur) {
+                // 触发验证
+                trigger(name).catch((error: unknown) => {
+                  console.error('Validation trigger failed:', error);
+                });
+              }
+              children.props.onBlur?.(e);
+            } catch (error) {
+              console.error('Form field blur handler error:', error);
             }
-            children.props.onBlur?.(e);
           };
 
           // 克隆子元素并注入 field 属性
@@ -97,4 +117,3 @@ export const FormField: React.FC<FormFieldProps> = ({
 };
 
 export default FormField;
-

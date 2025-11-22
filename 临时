@@ -1,0 +1,3413 @@
+{
+    "errorCode": 200,
+    "msg": null,
+    "data": [
+        {
+            "platformId": 1,
+            "subPlatformId": 0,
+            "platformName": "淘宝",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%B7%98%E5%AE%9D.png",
+            "platformSort": 1,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 20,
+                    "subscribeUrl": "https://fuwu.taobao.com/ser/detail.htm?spm=a1z13.pc_search_result.1234-fwlb.1.38885acatPYgIp&service_code=FW_GOODS-1838864&tracelog=search&from_key=%E6%97%BA%E5%BA%97%E9%80%9A&wework_cfm_code=N8nJEKnvaLwkd5dytlIJd%2BWToDy9CwZbRFIJSMPbv%2B6e%2BkbtmnAn5VhcoG%2BFE5V2yX7aocfaQPJbse3ksiTu%2FF1amZ8lDMRsZHNMqaaB%2FqiagaQcVoi%2F2QJPNN9AoeHORQ9BB2pNuUsDct8lH%2BgvGgZcWD1BCaTMIFrfVyRL79aYrcuie%2BlY%2BqH28U31lc6Vebv%2FU%2FiItML4HJ42bACR7P3T9GBzUmww0mJ49Fb%2FxhSSBa%2B20wdHt%2BW5X65V36%2BB4Q%3D%3D",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%B7%98%E5%AE%9D%E6%97%BA%E5%BA%97%E9%80%9A.png",
+                    "subscribeImgUrlNew": "http://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/taobao.png",
+                    "appKey": "21363512",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"旺店通ERP\",    \"desc\": \"功能全面，支持返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"2000元/年\",    \"refundAmount\": \"2000元\",    \"platformServiceFee\": \"0元\",    \"cycle\": \"支持按年购买\"}",
+                    "platformId": 1,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 39,
+            "subPlatformId": 0,
+            "platformName": "拼多多",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%8B%BC%E5%A4%9A%E5%A4%9A.png",
+            "platformSort": 2,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 2,
+                    "subscribeUrl": "https://fuwu.pinduoduo.com/service-market/service-detail?detailId=180",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/pddSub.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/pinduoduo.png",
+                    "appKey": "e6c4b8a127c14831b2ff860735cf8680",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{\"name\":\"旺店通\",\"desc\":\"功能全面、支持返款\",\"columns\":[{\"name\":\"售价\",\"code\":\"price\"},{\"name\":\"可退金额\",\"code\":\"refundAmount\"},{\"name\":\"平台手续费\",\"code\":\"platformServiceFee\"},{\"name\":\"周期\",\"code\":\"cycle\"}],\"price\":\"500元/6个月\",\"refundAmount\":\"497元\",\"platformServiceFee\":\"3元\",\"cycle\":\"支持按月、季度、半年、年购买\"}",
+                    "platformId": 39,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 69,
+            "subPlatformId": 0,
+            "platformName": "抖音",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%8A%96%E5%BA%97.png",
+            "platformSort": 3,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 3,
+                    "subscribeUrl": "https://fuwu.jinritemai.com/detail?service_id=35&from=fuwu_market_tab",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%8A%96%E5%BA%97%E6%97%BA%E5%BA%97%E9%80%9A.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/douyin.png",
+                    "appKey": "6839344028874491399",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{\"name\":\"旺店通企业版\",\"desc\": \"功能全面，支持返款\",\"columns\":[{\"name\":\"售价\",\"code\":\"price\"},{\"name\": \"可退金额\",\"code\": \"refundAmount\"},{\"name\": \"平台手续费\",\"code\": \"platformServiceFee\"},{\"name\": \"周期\",\"code\": \"cycle\"}],\"price\": \"2000元/年\",\"refundAmount\": \"1988元\",\"platformServiceFee\": \"12元\",\"cycle\": \"支持按月、季度、半年、年购买\"}",
+                    "platformId": 69,
+                    "subPlatformId": 0
+                },
+                {
+                    "id": 102,
+                    "subscribeUrl": "https://fuwu.jinritemai.com/detail?service_id=35&from=fuwu_market_tab",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/doudianFx.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/douyin_subscribe.png",
+                    "appKey": "6839344028874491399",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{\"name\": \"旺店通分销版\",\"desc\": \"价格优惠，不支持返款\",\"columns\": [{\"name\": \"售价\",\"code\": \"price\"},{\"name\": \"可退金额\",\"code\": \"refundAmount\"},{\"name\": \"平台手续费\",\"code\": \"platformServiceFee\"},{\"name\": \"周期\",\"code\": \"cycle\"}],\"price\": \"0.01元/年\",\"refundAmount\": \"0元\",\"platformServiceFee\": \"0.01元\",\"cycle\": \"支持按年购买\"}",
+                    "platformId": 69,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 75,
+            "subPlatformId": 0,
+            "platformName": "快手",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%BF%AB%E6%89%8B.png",
+            "platformSort": 4,
+            "dialogFlag": 1,
+            "basePlatforms": [
+                {
+                    "id": 4,
+                    "subscribeUrl": "https://fuwu.kwaixiaodian.com/detail?id=672030764850",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/kuaishousub.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/kuaishou.png",
+                    "appKey": "ks670191922008166061",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{\"name\": \"旺店通\",\"desc\": \"功能全面，支持返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"128元/年\",    \"refundAmount\": \"108.8元\",    \"platformServiceFee\": \"19.2元\",    \"cycle\": \"支持按月、季度、半年、年购买\"}",
+                    "platformId": 75,
+                    "subPlatformId": 0
+                },
+                {
+                    "id": 21,
+                    "subscribeUrl": "https://fuwu.kwaixiaodian.com/detail?id=824255354850",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E5%BF%AB%E6%89%8B%E6%85%A7%E6%89%93%E5%8D%95.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/ks_hdd.png",
+                    "appKey": "ks648518349455910684",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"慧打单\",    \"desc\": \"功能全面，价格优惠，不返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"180元/年\",    \"refundAmount\": \"0元\",    \"platformServiceFee\": \"180元\",    \"cycle\": \"支持按月、季度、半年、年购买\"}",
+                    "platformId": 75,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 3,
+            "subPlatformId": 0,
+            "platformName": "京东",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E4%BA%AC%E4%B8%9C.png",
+            "platformSort": 5,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 5,
+                    "subscribeUrl": "https://fw.jd.com/main/detail/FW_GOODS-33011?p=fw&t=pcsearch",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/jingdongSub.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/jingdong.png",
+                    "appKey": "05819A410458B7ED6B0CC22684BBB6D5",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 3,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 9,
+            "subPlatformId": 0,
+            "platformName": "1688",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/1688.png",
+            "platformSort": 6,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 11,
+                    "subscribeUrl": "https://pc.1688.com/product/detail.htm?productCode=3aBULx6NWBTcRpSckKRZt72ykl77JFN9amrvDpXsrmM%3D&productType=GROUP",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/1688%E6%97%BA%E5%BA%97%E9%80%9A.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/1688.png",
+                    "appKey": "7630861",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 9,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 83,
+            "subPlatformId": 0,
+            "platformName": "微信视频号(微信小店)",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%BE%AE%E4%BF%A1%E8%A7%86%E9%A2%91%E5%8F%B7.png",
+            "platformSort": 7,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 16,
+                    "subscribeUrl": "https://channels.weixin.qq.com/shop?from_wecom=1",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/shipinhao.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/shipinhao-new.png",
+                    "appKey": "wx46014db330be297a",
+                    "subscribeFlag": 0,
+                    "bindFlag": 1,
+                    "bindType": 4,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 83,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 17,
+            "subPlatformId": 0,
+            "platformName": "有赞",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%9C%89%E8%B5%9E.png",
+            "platformSort": 8,
+            "dialogFlag": 1,
+            "basePlatforms": [
+                {
+                    "id": 10,
+                    "subscribeUrl": "https://yingyong.youzan.com/cloud-app-detail/41917",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/youzannew.png",
+                    "subscribeImgUrlNew": "http://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/kdt_wdt.png",
+                    "appKey": "76521acffc58469351",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"旺店通\",    \"desc\": \"功能全面，支持返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"2000元/年\",    \"refundAmount\": \"1600元\",    \"platformServiceFee\": \"400元\",    \"cycle\": \"支持按年购买\"}",
+                    "platformId": 17,
+                    "subPlatformId": 0
+                },
+                {
+                    "id": 60,
+                    "subscribeUrl": "https://yingyong.youzan.com/cloud-app-detail/10002948",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/youzanhdd.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/youzanhdd.png",
+                    "appKey": "922e51b3cc759663f2",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"慧打单\",    \"desc\": \"功能全面，价格优惠，不返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"180元/年\",    \"refundAmount\": \"0元\",    \"platformServiceFee\": \"180元\",    \"cycle\": \"支持按月、季度、半年、年购买\"}",
+                    "platformId": 17,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 56,
+            "subPlatformId": 1,
+            "platformName": "小红书",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%B0%8F%E7%BA%A2%E4%B9%A6.png",
+            "platformSort": 9,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 14,
+                    "subscribeUrl": "https://fuwu.xiaohongshu.com/applicationDetail?appId=c524d5c1e45f47ae8914",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E5%B0%8F%E7%BA%A2%E4%B9%A6.png",
+                    "subscribeImgUrlNew": "http://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/xiaohongshu.png",
+                    "appKey": "c524d5c1e45f47ae8914",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 56,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 103,
+            "subPlatformId": 0,
+            "platformName": "美团-团好货",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E7%BE%8E%E5%9B%A2%E9%97%AA%E8%B4%AD%E5%9B%A2%E5%A5%BD%E8%B4%A7.png",
+            "platformSort": 10,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 17,
+                    "subscribeUrl": "https://opendj.meituan.com/epassportLogin/index?code=sWd3NrRw6mj3pwJk1TLECt3B1B0LjbvfqF_QODM82-my7BrUO2zcCSEQrmNUrCsJlvEBKS9fJOsFV2o2ZOZ0ml1axOcRX3QPSftCJXZgPy8RnwvNiACOxotyJua1JiRu_6fZ6D9KtWsY9w479hM4z5q-mX6G06nGFUOYQdbEnefTr31n09SqVx6T6k1WJkyXH6LrBbNJl5slodL559ZRBA&bind_type=1&app_name=%E6%97%BA%E5%BA%97%E9%80%9A",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/meituantuanhaohuo.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "5867",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 103,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 101,
+            "subPlatformId": 0,
+            "platformName": "得物",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/dewu.png",
+            "platformSort": 11,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 101,
+                    "subscribeUrl": "https://fuwu.dewu.com/service/detail?from=home&id=25",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/dewuAuth.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "9cd1a0fae0514bc284807fee33c27dfd",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"旺店通ERP\", \"desc\": \"功能全面，免费授权\", \"columns\": [{\"name\": \"售价\", \"code\": \"price\"}, {\"name\": \"可退金额\", \"code\": \"refundAmount\"}, {\"name\": \"平台手续费\", \"code\": \"platformServiceFee\"}, {\"name\": \"周期\", \"code\": \"cycle\"}], \"price\": \"0元\", \"refundAmount\": \"0元\", \"platformServiceFee\": \"0元\", \"cycle\": \"无有效期限制\"}",
+                    "platformId": 101,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 66,
+            "subPlatformId": 0,
+            "platformName": "鲸灵",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%A5%BD%E8%A1%A3%E5%BA%93.png",
+            "platformSort": 12,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 37,
+                    "subscribeUrl": "https://scrm.webuy.ai/",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E5%A5%BD%E8%A1%A3%E5%BA%93.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "wangDianTongSupplier",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 66,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 82,
+            "subPlatformId": 0,
+            "platformName": "天猫超市一盘货",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%A4%A9%E7%8C%AB%E8%B6%85%E5%B8%82%403x.png",
+            "platformSort": 13,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 77,
+                    "subscribeUrl": "https://web.txcs.tmall.com/login",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/tianmaopanhuo.png",
+                    "subscribeImgUrlNew": "http://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/taobao.png",
+                    "appKey": "21363512",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 82,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 69,
+            "subPlatformId": 1,
+            "platformName": "抖音代发",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%8A%96%E9%9F%B3%E4%BB%A3%E5%8F%91.png",
+            "platformSort": 14,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 45,
+                    "subscribeUrl": "https://fuwu.jinritemai.com/detail?btm_ppre=a0254.b7465.c6861.d43267&btm_pre=a0254.b9825.c7579.d6976_1&page_from=1h0ov140t_b9825&pre_show_id=efe5a81d-fc81-49f1-9d5d-7cea3142dc6a&searchKey=%E6%97%BA%E5%BA%97%E9%80%9A&service_id=20754",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E6%8A%96%E5%BA%97%E4%BB%A3%E5%8F%91.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/dydf.png",
+                    "appKey": "7007719461553702438",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 69,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 13,
+            "subPlatformId": 0,
+            "platformName": "苏宁",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E8%8B%8F%E5%AE%81%E6%98%93%E8%B4%AD.png",
+            "platformSort": 15,
+            "dialogFlag": 1,
+            "basePlatforms": [
+                {
+                    "id": 23,
+                    "subscribeUrl": "https://fuwu.suning.com/detail/10002328.html?from_wecom=1#key1=version1%23key2=cycle4",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E8%8B%8F%E5%AE%81%E6%97%BA%E5%BA%97%E9%80%9A.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/suning.png",
+                    "appKey": "e0628dbdaf31258f610c280b934e4135",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"旺店通\",    \"desc\": \"功能全面，支持返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"2000元/年\",    \"refundAmount\": \"1600元\",    \"platformServiceFee\": \"400元\",    \"cycle\": \"支持按年购买\"}",
+                    "platformId": 13,
+                    "subPlatformId": 0
+                },
+                {
+                    "id": 59,
+                    "subscribeUrl": "https://fuwu.suning.com/detail/1000101531.html",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E8%8B%8F%E5%AE%81%E6%85%A7%E6%89%93%E5%8D%95.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/snhdd.png",
+                    "appKey": "b1d17f82c47c442abba5debe778c0db4",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"慧打单\",    \"desc\": \"功能全面，价格优惠，不返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"180元/年\",    \"refundAmount\": \"0元\",    \"platformServiceFee\": \"180元\",    \"cycle\": \"支持按月、季度、半年、年购买\"}",
+                    "platformId": 13,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 13,
+            "subPlatformId": 1,
+            "platformName": "苏宁特卖",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E8%8B%8F%E5%AE%81%E6%98%93%E8%B4%AD.png",
+            "platformSort": 16,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 82,
+                    "subscribeUrl": "https://fuwu.suning.com/detail/10002328.html?from_wecom=1#key1=version1%23key2=cycle4",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E8%8B%8F%E5%AE%81%E6%97%BA%E5%BA%97%E9%80%9A.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/suning.png",
+                    "appKey": "e0628dbdaf31258f610c280b934e4135",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 13,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 32,
+            "subPlatformId": 0,
+            "platformName": "微店",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%BE%AE%E5%BA%97.png",
+            "platformSort": 17,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 6,
+                    "subscribeUrl": "https://d.weidian.com/weidian-pc/login/index.html?redirect_url=https%3A%2F%2Fh5.weidian.com%2Fm%2Fservice-market-pc%2Fdetail.html%3Fapp_key%3D632797#/",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E5%BE%AE%E5%BA%97%E6%97%BA%E5%BA%97%E9%80%9A.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/weidian.png",
+                    "appKey": "632797",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 32,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 28,
+            "subPlatformId": 1,
+            "platformName": "微盟",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%BE%AE%E7%9B%9F.png",
+            "platformSort": 18,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 24,
+                    "subscribeUrl": "https://fuwu.weimob.com/serviceDetail/3070",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/weimenneww.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/weimeng.png",
+                    "appKey": "65EEDD0A22A3871DA1E2A7279F3BE732",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 28,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 1,
+            "subPlatformId": 1,
+            "platformName": "天猫",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%A4%A9%E7%8C%AB.png",
+            "platformSort": 19,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 7,
+                    "subscribeUrl": "https://fuwu.taobao.com/ser/detail.htm?spm=a1z13.pc_search_result.1234-fwlb.1.38885acatPYgIp&service_code=FW_GOODS-1838864&tracelog=search&from_key=%E6%97%BA%E5%BA%97%E9%80%9A&wework_cfm_code=N8nJEKnvaLwkd5dytlIJd%2BWToDy9CwZbRFIJSMPbv%2B6e%2BkbtmnAn5VhcoG%2BFE5V2yX7aocfaQPJbse3ksiTu%2FF1amZ8lDMRsZHNMqaaB%2FqiagaQcVoi%2F2QJPNN9AoeHORQ9BB2pNuUsDct8lH%2BgvGgZcWD1BCaTMIFrfVyRL79aYrcuie%2BlY%2BqH28U31lc6Vebv%2FU%2FiItML4HJ42bACR7P3T9GBzUmww0mJ49Fb%2FxhSSBa%2B20wdHt%2BW5X65V36%2BB4Q%3D%3D",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%B7%98%E5%AE%9D%E6%97%BA%E5%BA%97%E9%80%9A.png",
+                    "subscribeImgUrlNew": "http://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/taobao.png",
+                    "appKey": "21363512",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"旺店通ERP\",    \"desc\": \"功能全面，支持返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"2000元/年\",    \"refundAmount\": \"2000元\",    \"platformServiceFee\": \"0元\",    \"cycle\": \"支持按年购买\"}",
+                    "platformId": 1,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 1,
+            "subPlatformId": 2,
+            "platformName": "淘宝特价",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%B7%98%E7%89%B9.png",
+            "platformSort": 20,
+            "dialogFlag": 1,
+            "basePlatforms": [
+                {
+                    "id": 38,
+                    "subscribeUrl": "https://fuwu.taobao.com/ser/detail.htm?spm=a1z13.pc_search_result.1234-fwlb.1.38885acatPYgIp&service_code=FW_GOODS-1838864&tracelog=search&from_key=%E6%97%BA%E5%BA%97%E9%80%9A&wework_cfm_code=N8nJEKnvaLwkd5dytlIJd%2BWToDy9CwZbRFIJSMPbv%2B6e%2BkbtmnAn5VhcoG%2BFE5V2yX7aocfaQPJbse3ksiTu%2FF1amZ8lDMRsZHNMqaaB%2FqiagaQcVoi%2F2QJPNN9AoeHORQ9BB2pNuUsDct8lH%2BgvGgZcWD1BCaTMIFrfVyRL79aYrcuie%2BlY%2BqH28U31lc6Vebv%2FU%2FiItML4HJ42bACR7P3T9GBzUmww0mJ49Fb%2FxhSSBa%2B20wdHt%2BW5X65V36%2BB4Q%3D%3D",
+                    "subscribeImgUrl": "http://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/taobao.png",
+                    "subscribeImgUrlNew": "http://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/taobao.png",
+                    "appKey": "21363512",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"旺店通ERP\",    \"desc\": \"功能全面，支持返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"2000元/年\",    \"refundAmount\": \"2000元\",    \"platformServiceFee\": \"0元\",    \"cycle\": \"支持按年购买\"}",
+                    "platformId": 1,
+                    "subPlatformId": 2
+                },
+                {
+                    "id": 61,
+                    "subscribeUrl": "https://fuwu.taobao.com/ser/detail.htm?service_code=FW_GOODS-1000163064&spm=a1z13.2196529.0.0.63f05acaExe6SQ&code=FW_GOODS-1000163064&tracelog=other_serv",
+                    "subscribeImgUrl": "http://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/taobao_ekb.png",
+                    "subscribeImgUrlNew": "http://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/taobao_ekb.png",
+                    "appKey": "23305776",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"e快帮\",    \"desc\": \"功能全面，10万单以下免费\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"2000元/年\",    \"refundAmount\": \"2000元\",    \"platformServiceFee\": \"0元\",    \"cycle\": \"支持按年购买\"}",
+                    "platformId": 1,
+                    "subPlatformId": 2
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 9,
+            "subPlatformId": 1,
+            "platformName": "淘工厂",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%B7%98%E5%B7%A5%E5%8E%82.png",
+            "platformSort": 21,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 39,
+                    "subscribeUrl": "https://tgc.tmall.com/",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E6%B7%98%E5%B7%A5%E5%8E%82.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/tao_gong_chang.png",
+                    "appKey": "9664583",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 9,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 106,
+            "subPlatformId": 0,
+            "platformName": "零售通",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/lingshouLogo.png",
+            "platformSort": 22,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 78,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/lingshoutong.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/lingshoutong.png",
+                    "appKey": "27938805",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 106,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 39,
+            "subPlatformId": 2,
+            "platformName": "快团团-团长",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%BF%AB%E5%9B%A2%E5%9B%A2%E5%9B%A2%E9%95%BF.png",
+            "platformSort": 23,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 42,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E5%BF%AB%E5%9B%A2%E5%9B%A2%E5%9B%A2%E9%95%BF.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "da1fa7af844f42148207538ba83d2fd7",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 39,
+                    "subPlatformId": 2
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 39,
+            "subPlatformId": 3,
+            "platformName": "供应商-快团团",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%BF%AB%E5%9B%A2%E5%9B%A2%E4%BE%9B%E5%BA%94%E5%95%86.png",
+            "platformSort": 24,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 43,
+                    "subscribeUrl": "https://ktt.pinduoduo.com/",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E5%BF%AB%E5%9B%A2%E5%9B%A2%E4%BE%9B%E5%BA%94%E5%95%86.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "da1fa7af844f42148207538ba83d2fd7",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 39,
+                    "subPlatformId": 3
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 3,
+            "subPlatformId": 3,
+            "platformName": "京东-FBP/FCS",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E4%BA%AC%E4%B8%9C.png",
+            "platformSort": 25,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 63,
+                    "subscribeUrl": "https://fw.jd.com/main/detail/FW_GOODS-33011?p=fw&t=pcsearch",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/jingdong.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/jingdong.png",
+                    "appKey": "05819A410458B7ED6B0CC22684BBB6D5",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 3,
+                    "subPlatformId": 3
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 3,
+            "subPlatformId": 5,
+            "platformName": "京东厂家直送",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E4%BA%AC%E4%B8%9C%E5%8E%82%E5%AE%B6%E7%9B%B4%E9%80%81.png",
+            "platformSort": 26,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 68,
+                    "subscribeUrl": "https://fw.jd.com/main/detail/FW_GOODS-33011?p=fw&t=pcsearch",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/jingdong.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/jingdong.png",
+                    "appKey": "05819A410458B7ED6B0CC22684BBB6D5",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 3,
+                    "subPlatformId": 5
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 3,
+            "subPlatformId": 6,
+            "platformName": "京东供销",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E4%BA%AC%E4%B8%9C.png",
+            "platformSort": 27,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 79,
+                    "subscribeUrl": "https://fw.jd.com/main/detail/FW_GOODS-33011?p=fw&t=pcsearch",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/jingdongSub.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/jingdong.png",
+                    "appKey": "05819A410458B7ED6B0CC22684BBB6D5",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 3,
+                    "subPlatformId": 6
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 3,
+            "subPlatformId": 8,
+            "platformName": "京东商仓合一（全渠道）",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E4%BA%AC%E4%B8%9C.png",
+            "platformSort": 28,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 75,
+                    "subscribeUrl": " https://o2o.jd.com/",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/jdschy.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 3,
+                    "subPlatformId": 8
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 139,
+            "subPlatformId": 0,
+            "platformName": "抖音供销",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%8A%96%E9%9F%B3%E4%BE%9B%E9%94%80.png",
+            "platformSort": 29,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 72,
+                    "subscribeUrl": "https://fuwu.jinritemai.com/detail?btm_pre=a0254.b9825.c19620&page_from=1ic55q0p1_b9825&pre_show_id=5a584823-715e-4b4b-baeb-5aa07a2ccf6c&service_id=23141",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/douyingongxiaoSub.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/douyin.png",
+                    "appKey": "7085527536070870558",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 139,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 154,
+            "subPlatformId": 0,
+            "platformName": "抖音超市",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/douyinchaoshi.png",
+            "platformSort": 30,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 103,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "7208798139615020602",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 154,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 103,
+            "subPlatformId": 1,
+            "platformName": "美团闪购医药",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E7%BE%8E%E5%9B%A2%E9%97%AA%E8%B4%AD%E5%8C%BB%E8%8D%AF%E5%81%A5%E5%BA%B7.png",
+            "platformSort": 30,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 41,
+                    "subscribeUrl": "https://open-shangou.meituan.com/erp/login?code=DqYqg02acR7zPW9H0mzHBYx%2BCxLuH24m3Opc8QtSCvvh%2FDtEZn3TIZ9I48VR%2FLZv2o5VqCg7%2Fos8MhR48RCb8YBJNjyhYXPQRxIw4lwOJJ4%3D&auth_type=oauth&company_name=%E5%8C%97%E4%BA%AC%E6%8E%8C%E4%B8%8A%E5%85%88%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8=#!/login",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E7%BE%8E%E5%9B%A2%E5%8C%BB%E8%8D%AF.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "5864",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 103,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 103,
+            "subPlatformId": 2,
+            "platformName": "美团闪购零售",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E7%BE%8E%E5%9B%A2%E9%97%AA%E8%B4%AD%E5%8C%BB%E8%8D%AF%E5%81%A5%E5%BA%B7.png",
+            "platformSort": 30,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 122,
+                    "subscribeUrl": "https://shangoue.meituan.com/#/tscc/poi/newAuthorize?type=detail&code=7cJelTqCul%2BIlvTjUsDbEbojn1RRPPw1905beR%2FTRZfgVa1gmesTH7%2BMPe5vxAkFehq761EV8B7thQ5qtvJSb7dd4YQFrtx6awb3jvVJ79o%3D&authorize_method=oauth",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E7%BE%8E%E5%9B%A2%E5%8C%BB%E8%8D%AF.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "122160",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 103,
+                    "subPlatformId": 2
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 80,
+            "subPlatformId": 0,
+            "platformName": "网易严选-同舟",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E4%BD%8D%E5%9B%BE%403x.png",
+            "platformSort": 31,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 76,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "wangyiyanxxuan",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 80,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 77,
+            "subPlatformId": 0,
+            "platformName": "海拍客",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/haipaike.png",
+            "platformSort": 32,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 85,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "HIPAC2018050210020073",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 77,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 55,
+            "subPlatformId": 1,
+            "platformName": "孩子王-一件代发",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%AD%A9%E5%AD%90%E7%8E%8B.png",
+            "platformSort": 33,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 67,
+                    "subscribeUrl": "https://open.haiziwang.com/auth/login?linkName=",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E5%AD%A9%E5%AD%90%E7%8E%8B.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/hzw-sub.png",
+                    "appKey": "haiziwang",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 55,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 117,
+            "subPlatformId": 0,
+            "platformName": "群接龙",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E7%BE%A4%E6%8E%A5%E9%BE%99.png",
+            "platformSort": 34,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 62,
+                    "subscribeUrl": "https://pro.qunjielong.com/",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E7%BE%A4%E6%8E%A5%E9%BE%99.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/qjl.png",
+                    "appKey": "qunjielong",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 117,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 148,
+            "subPlatformId": 0,
+            "platformName": "微博商城",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A.png",
+            "platformSort": 35,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 71,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E5%BE%AE%E5%8D%9A.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "3803904591",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 148,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 90,
+            "subPlatformId": 0,
+            "platformName": "微信小商店",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E5%95%86%E5%BA%97.png",
+            "platformSort": 36,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 15,
+                    "subscribeUrl": "https://channels.weixin.qq.com/shop",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E5%95%86%E5%BA%97.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/wx_xioashangdian-new.png",
+                    "appKey": "wx4b2048801282c99b",
+                    "subscribeFlag": 0,
+                    "bindFlag": 1,
+                    "bindType": 4,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 90,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 173,
+            "subPlatformId": 0,
+            "platformName": "盒马",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E7%9B%92%E9%A9%AC.png",
+            "platformSort": 37,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 83,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/imageHema.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/imageHema.png",
+                    "appKey": "467753",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 173,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 174,
+            "subPlatformId": 0,
+            "platformName": "聚好麦",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/juhaomai.png",
+            "platformSort": 38,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 84,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 174,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 169,
+            "subPlatformId": 0,
+            "platformName": "东方甄选",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E4%B8%9C%E6%96%B9%E7%94%84%E9%80%89.png",
+            "platformSort": 39,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 73,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 169,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 126,
+            "subPlatformId": 1,
+            "platformName": "启博微分销",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%BE%AE%E5%88%86%E9%94%80.png",
+            "platformSort": 40,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 74,
+                    "subscribeUrl": "https://fuwu.qbyun.com/serviceMarket/serviceDetail/21",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E5%90%AF%E5%8D%9A%E5%BE%AE%E5%88%86%E9%94%80.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 6,
+                    "hddErp": 0,
+                    "guideUrl": "https://fuwu.qbyun.com/serviceMarket/authorize",
+                    "guideImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E5%90%AF%E5%8D%9A%E5%BE%AE%E5%88%86%E9%94%80%E5%BC%95%E5%AF%BC%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%89%87.png",
+                    "platformJson": "",
+                    "platformId": 126,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 165,
+            "subPlatformId": 0,
+            "platformName": "本来生活",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%9C%AC%E6%9D%A5%E7%94%9F%E6%B4%BB.png",
+            "platformSort": 41,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 69,
+                    "subscribeUrl": "https://srm.benlai.com/authority/user/login?returnUrl=https%3a%2f%2fsrm.benlai.com%2f",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E6%9C%AC%E6%9D%A5%E7%94%9F%E6%B4%BB.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 165,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 74,
+            "subPlatformId": 0,
+            "platformName": "爱奇艺",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E7%88%B1%E5%A5%87%E8%89%BA.png",
+            "platformSort": 42,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 70,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 74,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 134,
+            "subPlatformId": 0,
+            "platformName": "闲鱼",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/xianyu.png",
+            "platformSort": 43,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 86,
+                    "subscribeUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/xianyusub.png",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/xianyusub.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/xianyusub.png",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 134,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 87,
+            "subPlatformId": 0,
+            "platformName": "阿里健康",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/alijiankang.png",
+            "platformSort": 44,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 145,
+                    "subscribeUrl": "https://zsxj.yuque.com/da3ftb/vgswhb/ee46qxwh32r7v770",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/alijiankang_20251027205340.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "31187843",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 87,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 2,
+            "subPlatformId": 0,
+            "platformName": "淘宝分销",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%B7%98%E5%AE%9D.png",
+            "platformSort": 44,
+            "dialogFlag": 1,
+            "basePlatforms": [
+                {
+                    "id": 87,
+                    "subscribeUrl": "https://fuwu.taobao.com/ser/detail.htm?spm=a1z13.pc_search_result.1234-fwlb.1.38885acatPYgIp&service_code=FW_GOODS-1838864&tracelog=search&from_key=%E6%97%BA%E5%BA%97%E9%80%9A&wework_cfm_code=N8nJEKnvaLwkd5dytlIJd%2BWToDy9CwZbRFIJSMPbv%2B6e%2BkbtmnAn5VhcoG%2BFE5V2yX7aocfaQPJbse3ksiTu%2FF1amZ8lDMRsZHNMqaaB%2FqiagaQcVoi%2F2QJPNN9AoeHORQ9BB2pNuUsDct8lH%2BgvGgZcWD1BCaTMIFrfVyRL79aYrcuie%2BlY%2BqH28U31lc6Vebv%2FU%2FiItML4HJ42bACR7P3T9GBzUmww0mJ49Fb%2FxhSSBa%2B20wdHt%2BW5X65V36%2BB4Q%3D%3D",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%B7%98%E5%AE%9D%E6%97%BA%E5%BA%97%E9%80%9A.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E6%B7%98%E5%AE%9D.png",
+                    "appKey": "21363512",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"旺店通ERP\",    \"desc\": \"功能全面，支持返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"2000元/年\",    \"refundAmount\": \"2000元\",    \"platformServiceFee\": \"0元\",    \"cycle\": \"支持按年购买\"}",
+                    "platformId": 2,
+                    "subPlatformId": 0
+                },
+                {
+                    "id": 88,
+                    "subscribeUrl": "https://fuwu.taobao.com/ser/detail.htm?service_code=FW_GOODS-1000163064&spm=a1z13.2196529.0.0.63f05acaExe6SQ&code=FW_GOODS-1000163064&tracelog=other_serv",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E6%B7%98%E5%AE%9De%E5%BF%AB%E5%B8%AE.png",
+                    "subscribeImgUrlNew": "http://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/taobao_ekb.png",
+                    "appKey": "23305776",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"e快帮\",    \"desc\": \"功能全面，10万单以下免费\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"2000元/年\",    \"refundAmount\": \"2000元\",    \"platformServiceFee\": \"0元\",    \"cycle\": \"支持按年购买\"}",
+                    "platformId": 2,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 45,
+            "subPlatformId": 0,
+            "platformName": "饿了么",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/eleme.png",
+            "platformSort": 45,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 93,
+                    "subscribeUrl": "https://nr.ele.me/app/eleme-nr-bfe-newretail/common-next#/pc/allService/service/detail?serviceNo=13fce8ec13e856eceb29eae80996e9a2&shopType=ALL&defaultActiveTab=&needLite=",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/elemeTip.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "27778986",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 45,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 21,
+            "subPlatformId": 0,
+            "platformName": "蘑菇街",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/mogujie.png",
+            "platformSort": 46,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 94,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/%E8%98%91%E8%8F%87%E8%A1%97.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "100181",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 21,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 138,
+            "subPlatformId": 0,
+            "platformName": "震坤行",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/zkx.png",
+            "platformSort": 47,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 95,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 138,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 159,
+            "subPlatformId": 0,
+            "platformName": "美团闪电帮帮",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/mtsdbb.png",
+            "platformSort": 48,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 96,
+                    "subscribeUrl": "https://epassport.meituan.com/portal/login?bg_source=3&service=com.sankuai.sgshopcrm.fe.himall&feconfig=com.sankuai.sgshopcrm.fe.himall&continue=https%3A%2F%2Fshandiancang.waimai.meituan.com%2Flogin%2Fhome",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/mt.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "https://epassport.meituan.com/portal/login?bg_source=3&service=com.sankuai.sgshopcrm.fe.himall&feconfig=com.sankuai.sgshopcrm.fe.himall&continue=https%3A%2F%2Fshandiancang.waimai.meituan.com%2Flogin%2Fhome",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 159,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 172,
+            "subPlatformId": 0,
+            "platformName": "淘宝买菜（旧）",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/taocaicai.png",
+            "platformSort": 49,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 97,
+                    "subscribeUrl": "https://mmc.dchain.hemayx.cn/login",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/taobaomaicai.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "34565004",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 172,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 126,
+            "subPlatformId": 17,
+            "platformName": "孔夫子",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/kongfuzi.png",
+            "platformSort": 50,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 98,
+                    "subscribeUrl": "https://login.kongfz.com/?returnUrl=https%3A%2F%2Fopen.kongfz.com%2Fv1%2Foauth2%2Fauthorize%3FappId%3D3%26state%3Dtest2-vvvltbfjdnu0qNOvJmbPCM9sNIPtzkDOCrs-v2%26redirectUri%3Dhttps%3A%2F%2Ferp.wangdian.cn%2Fauth2.php%26responseType%3Dcode",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/kongfuziSub.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "3",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 126,
+                    "subPlatformId": 17
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 126,
+            "subPlatformId": 18,
+            "platformName": "1889",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/1889.png",
+            "platformSort": 51,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 99,
+                    "subscribeUrl": "http://apiservice.1889buy.com/auth/",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/1889sub.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "80167270",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 126,
+                    "subPlatformId": 18
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 126,
+            "subPlatformId": 16,
+            "platformName": "一条家",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/yitiao.png",
+            "platformSort": 52,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 100,
+                    "subscribeUrl": "https://zsxj.yuque.com/da3ftb/vgswhb/hkcs8rd93c5c7g22",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/yitiaojiaSub.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 126,
+                    "subPlatformId": 16
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 14,
+            "subPlatformId": 0,
+            "platformName": "唯品会-JITX",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/weipinhui.png",
+            "platformSort": 53,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 104,
+                    "subscribeUrl": "https://vis.vip.com/login.php",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/vipSub.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/weipinhuisub.png",
+                    "appKey": "b727500f",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 14,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 80,
+            "subPlatformId": 1,
+            "platformName": "网易严选-繁星",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E4%BD%8D%E5%9B%BE%403x.png",
+            "platformSort": 54,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 105,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 80,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 14,
+            "subPlatformId": 1,
+            "platformName": "唯品会-MP",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/weipinhui.png",
+            "platformSort": 55,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 106,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/weipinhuimp.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "b727500f",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 14,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 144,
+            "subPlatformId": 0,
+            "platformName": "闯货",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/chuanghuo.png",
+            "platformSort": 56,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 107,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 144,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 146,
+            "subPlatformId": 0,
+            "platformName": "百度健康",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/baidujiankang.png",
+            "platformSort": 100,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 108,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 146,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 136,
+            "subPlatformId": 0,
+            "platformName": "百度营销",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/baiduyingxiao.png",
+            "platformSort": 100,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 123,
+                    "subscribeUrl": "https://u.baidu.com/oauth/page/index?platformId=4960345965958561794&appId=631adc48263ed428c6069df84267f3b4&scope=1002829,1002161&state=2120a2bdfcb4fe437f171cf6e41bf7d1&callback=https://auth.huice.com/auth/erp2/136/0",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "631adc48263ed428c6069df84267f3b4",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 136,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 68,
+            "subPlatformId": 0,
+            "platformName": "爱库存",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/aikucunshop.png",
+            "platformSort": 100,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 109,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/aikucun.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "bcca2801e57747b9a9d33017d7f008a7",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 68,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 193,
+            "subPlatformId": 0,
+            "platformName": "抖音小时达",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/dyxsd.png",
+            "platformSort": 101,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 111,
+                    "subscribeUrl": "https://fuwu.jinritemai.com/detail?btm_ppre=a0254.b132013.c0.d0&btm_pre=a0254.b9825.c7579.d6976_8&from=fuwu_market_tab&page_from=1ieuum8n7_b9825&pre_show_id=8cbfd6f0-463b-477c-84cf-4b66d0b89377&service_id=32675",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/dyxsdSub.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "7362013496256726578",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 193,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 58,
+            "subPlatformId": 0,
+            "platformName": "云集代销",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/yunji.png",
+            "platformSort": 102,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 112,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "app000012",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 58,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 164,
+            "subPlatformId": 0,
+            "platformName": "翼支付",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/yizhifu.png",
+            "platformSort": 103,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 113,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "0108",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 164,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 113,
+            "subPlatformId": 0,
+            "platformName": "药师帮",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/yaoshibang.png",
+            "platformSort": 104,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 114,
+                    "subscribeUrl": "https://www.ysbang.cn/index",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/yaoshibangSub.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 113,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 64,
+            "subPlatformId": 0,
+            "platformName": "好食期",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/haoshiqi.png",
+            "platformSort": 105,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 115,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 64,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 205,
+            "subPlatformId": 0,
+            "platformName": "钜汇平台",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/juhui.png",
+            "platformSort": 106,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 116,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 205,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 189,
+            "subPlatformId": 0,
+            "platformName": "来应平台",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/laiying.png",
+            "platformSort": 107,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 117,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 189,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 110,
+            "subPlatformId": 0,
+            "platformName": "度小店平台",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/duxiaodian.png",
+            "platformSort": 108,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 118,
+                    "subscribeUrl": "kaidian.baidu.com",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/duxiaodianSub.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 110,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 3
+        },
+        {
+            "platformId": 151,
+            "subPlatformId": 0,
+            "platformName": "禾量平台",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/heliang.png",
+            "platformSort": 109,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 119,
+                    "subscribeUrl": "http://www.iheying.cc/",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/heliangSub.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 151,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 184,
+            "subPlatformId": 0,
+            "platformName": "凡科",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/fanke.png",
+            "platformSort": 111,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 120,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/fankeSub.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "fk367954429aa1438d",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 184,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 88,
+            "subPlatformId": 0,
+            "platformName": "必要",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/biyao.png",
+            "platformSort": 112,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 121,
+                    "subscribeUrl": " https://shop.biyao.com/view/address/delivery.html",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 88,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 61,
+            "subPlatformId": 0,
+            "platformName": "酒仙网",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/jiuxian.png",
+            "platformSort": 113,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 124,
+                    "subscribeUrl": "https://www.jiuxian.com/",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/jiuxianSub.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 61,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 102,
+            "subPlatformId": 0,
+            "platformName": "喵速达",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/miaosuda.png",
+            "platformSort": 114,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 127,
+                    "subscribeUrl": "https://miaosuda.tmall.com/shop/view_shop.htm",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 102,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 72,
+            "subPlatformId": 0,
+            "platformName": "小米有品",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/xiaomiyoupin.png",
+            "platformSort": 116,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 126,
+                    "subscribeUrl": "https://www.xiaomiyoupin.com",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/xiaomiyoupin_1.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 72,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 188,
+            "subPlatformId": 0,
+            "platformName": "所有女生",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/suoyounvsheng.png",
+            "platformSort": 117,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 125,
+                    "subscribeUrl": "https://union.meione.com/login",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 188,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 126,
+            "subPlatformId": 26,
+            "platformName": "年糕妈妈",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/niangaomama.png",
+            "platformSort": 117,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 128,
+                    "subscribeUrl": "https://www.nicomama.com/",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 126,
+                    "subPlatformId": 26
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 70,
+            "subPlatformId": 0,
+            "platformName": "每日一淘",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/meiriyitao.png",
+            "platformSort": 118,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 130,
+                    "subscribeUrl": "https://supplier.mryitao.cn/home",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 70,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 98,
+            "subPlatformId": 0,
+            "platformName": "小芒电商",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/xiaomangdianshang.png",
+            "platformSort": 120,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 131,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/xiaomangdianshangauth.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 98,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 112,
+            "subPlatformId": 0,
+            "platformName": "丁香妈妈",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/dingxiangmama.png",
+            "platformSort": 121,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 148,
+                    "subscribeUrl": "https://auth.dxy.cn/accounts/login?logoDqId=21208&qr=false&agreement=dxm&method=2&service=https%3A%2F%2Fmama.dxy.com%2Fuser%2Fsso%2Flogin%2FL3N5c3RlbS92ZXJpZmljYXRpb24tc3VwcGxpZXIvaW5kZXg",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 112,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 207,
+            "subPlatformId": 0,
+            "platformName": "微赞",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/weizan.png",
+            "platformSort": 121,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 129,
+                    "subscribeUrl": "https://live.vzan.com/admin/#/login",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/weizan2.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 207,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 40,
+            "subPlatformId": 0,
+            "platformName": "京东到家",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/jingdongdaojia.png",
+            "platformSort": 121,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 132,
+                    "subscribeUrl": "http://www.jddj.com",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 40,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 125,
+            "subPlatformId": 0,
+            "platformName": "供销平台",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E4%BE%9B%E9%94%80%E5%B9%B3%E5%8F%B0.png",
+            "platformSort": 122,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 58,
+                    "subscribeUrl": "1",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "1",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 125,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 208,
+            "subPlatformId": 0,
+            "platformName": "聚宝赞",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/jubaozan.png",
+            "platformSort": 125,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 134,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 208,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 116,
+            "subPlatformId": 1,
+            "platformName": "哔哩哔哩会员购-开店模式",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/bilibilihuiyuan.png",
+            "platformSort": 126,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 135,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 116,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 209,
+            "subPlatformId": 0,
+            "platformName": "易联凤巢小程序",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/yilianfengchao.png",
+            "platformSort": 127,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 133,
+                    "subscribeUrl": "https://www.miduo1000.com/",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 209,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 48,
+            "subPlatformId": 0,
+            "platformName": "美囤妈妈",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/meitunmama.png",
+            "platformSort": 128,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 136,
+                    "subscribeUrl": "http://business.meitun.com/",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/meitunmama_subscribe.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 48,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 65,
+            "subPlatformId": 0,
+            "platformName": "大V店",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/davdian.png",
+            "platformSort": 129,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 143,
+                    "subscribeUrl": "https://davdian.com",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 65,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 126,
+            "subPlatformId": 21,
+            "platformName": "棒棒糖",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/bangbangtang.png",
+            "platformSort": 130,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 146,
+                    "subscribeUrl": "https://www.bbtkids.cn",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 126,
+                    "subPlatformId": 21
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 150,
+            "subPlatformId": 0,
+            "platformName": "微商相册",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/weishangxiangce.png",
+            "platformSort": 131,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 154,
+                    "subscribeUrl": "https://www.wegooooo.com",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 150,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 126,
+            "subPlatformId": 22,
+            "platformName": "越洋店铺",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/yueyangdianpu.png",
+            "platformSort": 132,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 144,
+                    "subscribeUrl": "https://www.shop2cn.cn",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 126,
+                    "subPlatformId": 22
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 94,
+            "subPlatformId": 0,
+            "platformName": "天猫国际直营",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%A4%A9%E7%8C%AB%E5%9B%BD%E9%99%85.png",
+            "platformSort": 133,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 137,
+                    "subscribeUrl": "https://tdi.tmall.com/",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 94,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 7,
+            "subPlatformId": 0,
+            "platformName": "当当网",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/dangdangwang.png",
+            "platformSort": 135,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 147,
+                    "subscribeUrl": "https://login.dangdang.com/?returnurl=https%3A%2F%2Ffuwu.dangdang.com%2Findex",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 7,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 105,
+            "subPlatformId": 0,
+            "platformName": "云货优选",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/yunhuoyouxuan.png",
+            "platformSort": 136,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 150,
+                    "subscribeUrl": "https://supplier.yunhuotong.net/yhtplus/supplier/#/indexData",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 105,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 185,
+            "subPlatformId": 0,
+            "platformName": "网易-易采",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/wangyiyicai.png",
+            "platformSort": 138,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 149,
+                    "subscribeUrl": "https://admin.yanxuanka.com/tob-operation/login.html#/signin?url=https://merchant.yanxuanka.com/tob-merchant/merchant-base/",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 185,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 214,
+            "subPlatformId": 0,
+            "platformName": "麦芽田",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/maiyatian.png",
+            "platformSort": 140,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 152,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "hlFJTWY3",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 214,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 217,
+            "subPlatformId": 0,
+            "platformName": "药房网",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/yaofangwang.png",
+            "platformSort": 142,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 160,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 217,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 216,
+            "subPlatformId": 0,
+            "platformName": "星云有客商城",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/xingyun.png",
+            "platformSort": 143,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 151,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 216,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 126,
+            "subPlatformId": 5,
+            "platformName": "邮乐网",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/youlewang.png",
+            "platformSort": 146,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 153,
+                    "subscribeUrl": "https://my.ule.com/usr/ssllogin.do",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 126,
+                    "subPlatformId": 5
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 17,
+            "subPlatformId": 1,
+            "platformName": "有赞-新零售",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/youzanlingshou.png",
+            "platformSort": 152,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 156,
+                    "subscribeUrl": "https://yingyong.youzan.com/cloud-app-detail/41917",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/youzannew.png",
+                    "subscribeImgUrlNew": "http://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/kdt_wdt.png",
+                    "appKey": "76521acffc58469351",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"旺店通\",    \"desc\": \"功能全面，支持返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"2000元/年\",    \"refundAmount\": \"1600元\",    \"platformServiceFee\": \"400元\",    \"cycle\": \"支持按年购买\"}",
+                    "platformId": 17,
+                    "subPlatformId": 1
+                },
+                {
+                    "id": 157,
+                    "subscribeUrl": "https://yingyong.youzan.com/cloud-app-detail/10002948",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/youzanhdd.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/youzanhdd.png",
+                    "appKey": "922e51b3cc759663f2",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "{    \"name\": \"慧打单\",    \"desc\": \"功能全面，价格优惠，不返款\",    \"columns\": [        {            \"name\": \"售价\",            \"code\": \"price\"        },        {            \"name\": \"可退金额\",            \"code\": \"refundAmount\"        },        {            \"name\": \"平台手续费\",            \"code\": \"platformServiceFee\"        },        {            \"name\": \"周期\",            \"code\": \"cycle\"        }    ],    \"price\": \"180元/年\",    \"refundAmount\": \"0元\",    \"platformServiceFee\": \"180元\",    \"cycle\": \"支持按月、季度、半年、年购买\"}",
+                    "platformId": 17,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 201,
+            "subPlatformId": 0,
+            "platformName": "抖音来客",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/douyinlaike.png",
+            "platformSort": 152,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 158,
+                    "subscribeUrl": "https://jhscrm.com/#/",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 201,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 28,
+            "subPlatformId": 2,
+            "platformName": "微盟-智慧零售",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/weimeng.png",
+            "platformSort": 153,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 176,
+                    "subscribeUrl": "https://master.weimob.com/bos/products/home/4022458865848/6jw7ho6ikX2cxhwxyeX6jxgjehk2/dashbord/index",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 6,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 28,
+                    "subPlatformId": 2
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 62,
+            "subPlatformId": 0,
+            "platformName": "平安好医生",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/pinganhaoyisheng.png",
+            "platformSort": 155,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 170,
+                    "subscribeUrl": "https://www.jk.cn/",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 62,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 142,
+            "subPlatformId": 0,
+            "platformName": "喵街",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/miaojie.png",
+            "platformSort": 156,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 164,
+                    "subscribeUrl": "https://www.intime.com.cn/cat",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 142,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 204,
+            "subPlatformId": 0,
+            "platformName": "唯商城",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/weishangcheng.png",
+            "platformSort": 157,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 161,
+                    "subscribeUrl": "https://mymissin.webportal.top/?url=https://i.mall.vip.webportal.top/manage_v2/eCommerceERPAuth.jsp?isOem=true&client_id=fk367954429aa1438d&redirect_uri=https://erp.wangdian.cn/auth2.php&state=prodgray5-vvvMvDJLTB0xyG0fKICl6SDdlVLFprVGNWe-erpx",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/WSC.png",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 204,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 219,
+            "subPlatformId": 0,
+            "platformName": "爱奇艺直播电商平台",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/aiqiyi.png",
+            "platformSort": 159,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 162,
+                    "subscribeUrl": "https://ecseller.iqiyi.com/?from=echome",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 219,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 212,
+            "subPlatformId": 0,
+            "platformName": "订货宝",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/dinghuobao.png",
+            "platformSort": 160,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 163,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 212,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 55,
+            "subPlatformId": 0,
+            "platformName": "孩子王",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E5%AD%A9%E5%AD%90%E7%8E%8B.png",
+            "platformSort": 161,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 171,
+                    "subscribeUrl": "https://open.haiziwang.com/auth/login?linkName=",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/haiziwangtip.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/hzw-sub.png",
+                    "appKey": "haiziwang",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 55,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 63,
+            "subPlatformId": 0,
+            "platformName": "下厨房",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/xiachufang.png",
+            "platformSort": 162,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 172,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 63,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 118,
+            "subPlatformId": 0,
+            "platformName": "招商银行网上商城（掌上生活）",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/zsyh_zssh.png",
+            "platformSort": 163,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 175,
+                    "subscribeUrl": "https://mall.cmbchina.com/",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 118,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 1
+        },
+        {
+            "platformId": 223,
+            "subPlatformId": 0,
+            "platformName": "支付宝导购",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/zhifubaodaogou.png",
+            "platformSort": 164,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 177,
+                    "subscribeUrl": "https://zlive.alipay.com/page/portal/home",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 223,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 97,
+            "subPlatformId": 0,
+            "platformName": "妈妈良品",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/mamaliangpin.png",
+            "platformSort": 164,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 173,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 97,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 85,
+            "subPlatformId": 0,
+            "platformName": "途虎养车",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/tuhuyangche.png",
+            "platformSort": 165,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 169,
+                    "subscribeUrl": "https://vender.tuhu.cn",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 85,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 126,
+            "subPlatformId": 19,
+            "platformName": "洋葱网",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/yangcong.png",
+            "platformSort": 165,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 174,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 126,
+                    "subPlatformId": 19
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 176,
+            "subPlatformId": 0,
+            "platformName": "大师熊",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/dashixiong.png",
+            "platformSort": 167,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 178,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 176,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 9,
+            "subPlatformId": 5,
+            "platformName": "淘宝买菜（新）",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/img/taobaomaicai.png",
+            "platformSort": 168,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 179,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 5,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 9,
+                    "subPlatformId": 5
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 155,
+            "subPlatformId": 0,
+            "platformName": "1号药城",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/1HYC.png",
+            "platformSort": 169,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 180,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 155,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 1
+        },
+        {
+            "platformId": 199,
+            "subPlatformId": 0,
+            "platformName": "好又多",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/haoyouduo.png",
+            "platformSort": 170,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 181,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 199,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 121,
+            "subPlatformId": 0,
+            "platformName": "单创VTN",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/danchuangVTN.png",
+            "platformSort": 171,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 182,
+                    "subscribeUrl": "",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 1,
+                    "bindFlag": 0,
+                    "bindType": 2,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 121,
+                    "subPlatformId": 0
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 58,
+            "subPlatformId": 1,
+            "platformName": "云集POP",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/popyunji.png",
+            "platformSort": 175,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 185,
+                    "subscribeUrl": "https://www.yunjiglobal.com",
+                    "subscribeImgUrl": "",
+                    "subscribeImgUrlNew": "",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 3,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 58,
+                    "subPlatformId": 1
+                }
+            ],
+            "state": 0
+        },
+        {
+            "platformId": 3,
+            "subPlatformId": 9,
+            "platformName": "京东自营采销",
+            "imgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_platform/%E4%BA%AC%E4%B8%9C.png",
+            "platformSort": 176,
+            "dialogFlag": 0,
+            "basePlatforms": [
+                {
+                    "id": 184,
+                    "subscribeUrl": "https://fw.jd.com/main/detail/FW_GOODS-33011?p=fw&t=pcsearch",
+                    "subscribeImgUrl": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/new_subscribe/jingdongSub.png",
+                    "subscribeImgUrlNew": "https://erpx-prod.oss-cn-zhangjiakou.aliyuncs.com/logo/platform/subscribe/jingdong.png",
+                    "appKey": "",
+                    "subscribeFlag": 0,
+                    "bindFlag": 0,
+                    "bindType": 1,
+                    "hddErp": 0,
+                    "guideUrl": "",
+                    "guideImgUrl": "",
+                    "platformJson": "",
+                    "platformId": 3,
+                    "subPlatformId": 9
+                }
+            ],
+            "state": 0
+        }
+    ],
+    "success": true
+}

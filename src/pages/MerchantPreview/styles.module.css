@@ -1,0 +1,579 @@
+/* 商家后台预览界面样式 */
+
+.merchantPreview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fa;
+}
+
+.contentHeader {
+  padding: 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.contentTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.contentSubtitle {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.browserContainer {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* 左侧浏览器列表 */
+.browserList {
+  width: 320px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.browserListHeader {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.browserListTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.browserListHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.browserCount {
+  font-size: 12px;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.platformAccountBtn {
+  height: 28px;
+  padding: 0 12px;
+  background: linear-gradient(135deg, #3964fe 0%, #5b7cfe 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.platformAccountBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(57, 100, 254, 0.3);
+}
+
+.platformAccountBtn:active {
+  transform: translateY(0);
+}
+
+.browserListContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.browserItem {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.browserItem:hover {
+  border-color: #3964fe;
+  background: #f9fafb;
+  transform: translateX(2px);
+}
+
+.browserItem.active {
+  border-color: #3964fe;
+  background: linear-gradient(135deg,
+      rgba(57, 100, 254, 0.05) 0%,
+      rgba(91, 124, 254, 0.05) 100%);
+  box-shadow: 0 2px 8px rgba(57, 100, 254, 0.15);
+}
+
+.browserItem.crashed {
+  border-color: #ff4d4f;
+  background: rgba(255, 77, 79, 0.05);
+}
+
+.browserItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.browserItemInfo {
+  flex: 1;
+}
+
+.browserItemName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.browserItemPlatform {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.browserItemActions {
+  display: flex;
+  gap: 4px;
+}
+
+.visibilityBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.visibilityBtn:hover {
+  background: #f3f4f6;
+}
+
+.browserItemStatus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.statusOnline {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.statusOffline {
+  background: rgba(107, 114, 128, 0.1);
+  color: #6b7280;
+}
+
+.statusCrashed {
+  background: rgba(255, 77, 79, 0.1);
+  color: #ff4d4f;
+}
+
+.recoverBtn {
+  background: #3964fe;
+  color: #ffffff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.recoverBtn:hover {
+  background: #2d52d4;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(57, 100, 254, 0.3);
+}
+
+.browserItemResources {
+  display: flex;
+  gap: 16px;
+  padding-top: 8px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.resourceItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.resourceLabel {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.resourceValue {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+/* 右侧浏览器预览区域 */
+.browserPreview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  min-width: 0;
+}
+
+/* 浏览器工具栏 */
+.browserToolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.toolbarLeft {
+  display: flex;
+  gap: 4px;
+}
+
+.toolbarBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.toolbarBtn:hover:not(:disabled) {
+  background: #f3f4f6;
+  border-color: #3964fe;
+  color: #3964fe;
+}
+
+.toolbarBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.urlBar {
+  flex: 1;
+  display: flex;
+}
+
+.urlInput {
+  flex: 1;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #ffffff;
+  transition: all 0.2s;
+}
+
+.urlInput:focus {
+  outline: none;
+  border-color: #3964fe;
+  box-shadow: 0 0 0 3px rgba(57, 100, 254, 0.1);
+}
+
+.toolbarRight {
+  display: flex;
+  gap: 8px;
+}
+
+.injectBtn {
+  height: 32px;
+  padding: 0 12px;
+  background: linear-gradient(135deg, #3964fe 0%, #5b7cfe 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.injectBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(57, 100, 254, 0.3);
+}
+
+.injectBtn:active {
+  transform: translateY(0);
+}
+
+/* iframe容器 */
+.iframeContainer {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  min-height: 0;
+}
+
+.browserIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ffffff;
+}
+
+/* iframe 加载状态 */
+.iframeLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  z-index: 10;
+}
+
+.loadingSpinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #f3f4f6;
+  border-top-color: #3964fe;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* iframe 错误提示 */
+.iframeError {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 48px;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.errorIcon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.errorTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.errorMessage {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+  text-align: center;
+  max-width: 500px;
+}
+
+.errorTip {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.errorTip p {
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.errorTip ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.errorTip li {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+
+.errorSolution {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 13px;
+  color: #3964fe !important;
+  font-weight: 500 !important;
+}
+
+.retryBtn {
+  background: linear-gradient(135deg, #3964fe 0%, #5b7cfe 100%);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(57, 100, 254, 0.25);
+}
+
+.retryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(57, 100, 254, 0.3);
+}
+
+.retryBtn:active {
+  transform: translateY(0);
+}
+
+/* 崩溃提示 */
+.crashPrompt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  text-align: center;
+}
+
+.crashIcon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.crashTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.crashMessage {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+  max-width: 400px;
+}
+
+.recoverBtnLarge {
+  background: linear-gradient(135deg, #3964fe 0%, #5b7cfe 100%);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(57, 100, 254, 0.25);
+}
+
+.recoverBtnLarge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(57, 100, 254, 0.3);
+}
+
+.recoverBtnLarge:active {
+  transform: translateY(0);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .browserContainer {
+    flex-direction: column;
+  }
+
+  .browserList {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  .browserToolbar {
+    flex-wrap: wrap;
+  }
+
+  .toolbarRight {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 8px;
+  }
+}

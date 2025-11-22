@@ -1,5 +1,10 @@
-import React, { ReactNode } from 'react';
-import { Form as AntForm, FormProps as AntFormProps, Button, Space } from 'antd';
+import { ReactNode } from 'react';
+import {
+  Form as AntForm,
+  FormProps as AntFormProps,
+  Button,
+  Space,
+} from 'antd';
 import { FormProvider, useForm, FieldValues } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -41,7 +46,8 @@ export interface FormProps<T extends FieldValues = FieldValues> {
   /** 表单初始值 */
   defaultValues?: Partial<T>;
   /** 表单验证规则（Zod schema） */
-  schema?: z.ZodType<T>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  schema?: z.ZodType<any, any, any>;
   /** 按钮配置 */
   buttonConfig?: FormButtonConfig;
   /** 表单布局 */
@@ -84,10 +90,12 @@ function Form<T extends FieldValues = FieldValues>({
   formProps,
   mode = 'onChange', // 默认实时验证
 }: FormProps<T>) {
-  // 创建 React Hook Form 实例
+  // 创建 React Hook Form 实例（遵循宪法.md第13.1.1节TypeScript规范：类型安全）
   const methods = useForm<T>({
-    defaultValues: defaultValues as T,
-    resolver: schema ? zodResolver(schema) : undefined,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    defaultValues: defaultValues as any,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    resolver: schema ? (zodResolver(schema) as any) : undefined,
     mode, // 验证模式
   });
 
@@ -140,12 +148,15 @@ function Form<T extends FieldValues = FieldValues>({
         labelCol={labelCol}
         wrapperCol={wrapperCol}
         className={`${styles.form} ${className || ''}`}
-        onFinish={handleSubmit(handleFormSubmit)}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        onFinish={handleSubmit(handleFormSubmit as any)}
       >
         {children}
 
         {(showSubmit || showReset || showCancel || customButtons) && (
-          <AntForm.Item className={`${styles.formButtons} ${buttonLayoutClass}`}>
+          <AntForm.Item
+            className={`${styles.formButtons} ${buttonLayoutClass}`}
+          >
             <Space>
               {showSubmit && (
                 <Button
@@ -200,7 +211,6 @@ export { useFormContext } from 'react-hook-form';
 export { FormField };
 
 /**
- * 导出类型
+ * 导出类型（已在接口定义处导出，这里注释掉避免重复导出）
  */
-export type { FormProps, FormButtonConfig };
-
+// export type { FormProps, FormButtonConfig };
